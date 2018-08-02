@@ -10,5 +10,5 @@ def main():
         if str_ == stri_[i]+stri_[i+1]+stri_[i+2]:
             cou = cou + 1
     print(cou)
-if __name__== "__main__":
+if __name__ == "__main__":
     main()

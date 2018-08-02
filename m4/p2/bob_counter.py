@@ -1,4 +1,3 @@
-"""string"""
 '''Assume s is a string of lower case characters.
 Number of times bob occurs is: 2'''
 def main():

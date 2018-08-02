@@ -6,14 +6,14 @@
 #Number of vowels: 5
 
 def main():
-	"""vowel"""
+    """vowel"""
     s = input()
-	# the input string is in s
-	# remove pass and start your code here
+    # the input string is in s
+    # remove pass and start your code here
     c = 0
     for letter in s:
         if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u':
-        	c = c + 1
+            c = c + 1
     print(c)
 if __name__== "__main__":
 	main()

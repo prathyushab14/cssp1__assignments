@@ -7,13 +7,13 @@
 
 def main():
     """vowel"""
-    s = input()
+    s_ = input()
     # the input string is in s
     # remove pass and start your code here
-    c = 0
-    for letter in s:
-        if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u':
-            c = c + 1
-    print(c)
+    c_ = 0
+    for letter_ in s:
+        if letter_ == 'a' or letter_ == 'e' or letter_ == 'i' or letter_ == 'o' or letter_ == 'u':
+            c_ = c_ + 1
+    print(c_)
 if __name__== "__main__":
 	main()

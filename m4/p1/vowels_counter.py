@@ -5,15 +5,15 @@
 #Number of vowels: 5
 
 def main():
-	s = input()
+    s = input()
 	# the input string is in s
 	# remove pass and start your code here
-	c = 0
-	letter = 0
-	while letter in s:
-		if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u':
-		    c = c + 1
-	print(c)
+    c = 0
+    letter = ''
+    while letter in s:
+        if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u':
+        	c = c + 1
+        print(c)
 	pass
 
 if __name__== "__main__":

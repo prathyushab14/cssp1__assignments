@@ -1,4 +1,4 @@
-# Write a python program to find if the given number is a perfect cube or not
+"""cube"""# Write a python program to find if the given number is a perfect cube or not
 # using guess and check algorithm
 
 # testcase 1
@@ -10,15 +10,15 @@
 # Output: 21950 is not a perfect cube
 def main():
 	# input is captured in s
-    X = input()
-    for guess in range(abs(X)+1):
-        if guess**3 >= abs(X):
+    x_c = input()
+    for guess in range(abs(x_c)+1):
+        if guess**3 >= abs(x_c):
             break
-        if guess**3 != abs(X):
-            print(X, 'is not a perfect cube')
+        if guess**3 != abs(x_c):
+            print(x_c, 'is not a perfect cube')
         else:
-            if X < 0:
+            if x_c < 0:
                 guess = -guess
-            print('cube root of' + str(X) + ' is ' + str(guess))
+            print('cube root of' + str(x_c) + ' is ' + str(guess))
 if __name__ == "__main__":
     main()

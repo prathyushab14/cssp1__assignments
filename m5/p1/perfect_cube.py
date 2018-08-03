@@ -1,6 +1,7 @@
 """cube"""
 def main():
     x_1 = int(input())
+    guess_1 = 0
     for guess_1 in range(abs(x_1)+1):
         if guess_1**3 >= abs(x_1):
             break

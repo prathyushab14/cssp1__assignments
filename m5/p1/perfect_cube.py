@@ -9,6 +9,7 @@
 # Input: 21950
 # Output: 21950 is not a perfect cube
 def main():
+	"""cube"""
 	# input is captured in s
     x_c = input()
     for guess in range(abs(x_c)+1):

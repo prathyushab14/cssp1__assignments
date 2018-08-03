@@ -1,5 +1,6 @@
 """cube"""
 def main():
+    """cube"""
     x_1 = int(input())
     guess_1 = 0
     for guess_1 in range(abs(x_1)+1):

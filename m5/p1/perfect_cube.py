@@ -11,15 +11,15 @@
 def main():
 	"""cube"""
 	# input is captured in s
-    x_c = input()
-    for guess_1 in range(abs(x_c)+1):
-        if guess_1**3 >= abs(x_c):
+    x_0 = input()
+    for guess_1 in range(abs(x_0)+1):
+        if guess_1**3 >= abs(x_0):
             break
-        if guess_1**3 != abs(x_c):
-            print(x_c, 'is not a perfect cube')
+        if guess_1**3 != abs(x_0):
+            print(x_0, 'is not a perfect cube')
         else:
-            if x_c < 0:
+            if x_0 < 0:
                 guess_1 = -guess_1
-            print('cube root of' + str(x_c) + ' is ' + str(guess_1))
+            print('cube root of' + str(x_0) + ' is ' + str(guess_1))
 if __name__ == "__main__":
     main()

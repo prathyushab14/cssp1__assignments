@@ -10,7 +10,7 @@ def main():
     str_input = input()
     s1 = ' '
     if(str_input[:len(str_input)+1] == '!' or '@' or '$' or '%' or '^' or '&' or '*'):
-            print(str_input = s1)
+            print(str_input=s1)
     else:
         print(str_input)
 if __name__ == "__main__":

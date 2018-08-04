@@ -1,23 +1,17 @@
-"""square root"""
-# Write a python program to find the square root of the given number
-# using approximation method
+'''This program evaluates square root of number using bisection method.'''
 def main():
-	s = raw_input()
-	"""square root"""
-	epsilon = 0.01
-	x_q = int(input())
-    epsilon_ = 0.01
-    numuesses_ = 0
-    low_ = 0.0
-    high_ = x_q
-    ans_ = (high_ + low_)/2.0
-    while abs(ans_**2 - x_q) >= epsilon_:
-        numuesses_ += 1
-        if ans_**2 < x_q:
-            low_ = ans_
+    '''Main function.'''
+    num_1 = int(input())
+    epsilon = 0.01
+    low = 0
+    high = num_1
+    guess = (high + low)/2.0
+    while abs(guess**2-num_1) >= epsilon:
+        if guess**2 < num_1:
+            low = guess
         else:
-            high_ = ans_
-        ans_ = (high_ + low_)/2.0
-    print(str(ans_))
+            high = guess
+        guess = (high + low)/2.0
+    print(guess)
 if __name__ == "__main__":
     main()

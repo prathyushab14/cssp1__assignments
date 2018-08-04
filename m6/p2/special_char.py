@@ -10,7 +10,7 @@ def main():
     str_input = input()
     s1 = ' '
     if char in str_input('!' or '@' or '$' or '%' or '^' or '&' or '*'):
-            char = s1
+            char = ' '
     else:
         print(str_input)
 if __name__ == "__main__":

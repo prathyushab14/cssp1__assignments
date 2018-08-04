@@ -2,8 +2,7 @@
 # Write a python program to find the square root of the given number 
 # using approximation method
 def main():
-    s = raw_input()
-    """square"""
+    """main"""
     squ_ = int(input())
     eps_ = 0.01
     guess_ = 0.0

@@ -9,7 +9,7 @@ def main():
     '''
     str_input = input()
     s1 = ' '
-    for char in str_input('!' or '@' or '$' or '%' or '^' or '&' or '*'):
+    if char in str_input('!' or '@' or '$' or '%' or '^' or '&' or '*'):
             str_input=s1
     else:
         print(str_input)

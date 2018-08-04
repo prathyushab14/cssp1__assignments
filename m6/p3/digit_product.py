@@ -10,7 +10,7 @@ def main():
     '''
     int_input = int(input())
     product = 1
-    while(int_input >= 1)
+    while(int_input >= 1):
         l=int_input % 10
         int_input = int_input // 10
         product = product*l

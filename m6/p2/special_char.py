@@ -7,7 +7,7 @@ def main():
     '''
     Read string from the input, store it in variable str_input.
     '''
-    str_input = input()
+str_input = input()
     for char in str_input:
         if(char == '!', '@', '$', '%', '^', '&', '*'):
             print(' ')

@@ -8,6 +8,9 @@ def main():
     Read string from the input, store it in variable str_input.
     '''
     str_input = input()
-
+    for char in str_input
+        if(str_input == '!', '@', '$', '%', '^', '&', '*'):
+        	char == ""
+    print(str_input)
 if __name__ == "__main__":
     main()

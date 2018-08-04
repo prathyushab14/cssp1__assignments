@@ -11,6 +11,6 @@ def main():
     for i in str_input:
     	if (i == '!' or '@' or '#' or '$' or '%' or '^' or '&' or '*'):
     		i = ' '
-    print(i)
+    print(str_input)
 if __name__ == "__main__":
     main()

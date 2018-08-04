@@ -3,7 +3,7 @@
 
 def main():
 	s = raw_input()
-	 """square"""
+	"""square"""
     squ_ = int(input())
     eps_ = 0.01
     guess_ = 0.0

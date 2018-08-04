@@ -15,8 +15,8 @@ def main():
         l = int_input % 10
         int_input = int_input // 10
         product = - (product*l)
-    elif(int_input == 0):
-        print(0)
+    if(int_input == 0):
+    	product = 0
     while(int_input >= 1):
         l = int_input % 10
         int_input = int_input // 10

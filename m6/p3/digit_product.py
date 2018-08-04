@@ -22,5 +22,7 @@ def main():
         int_input = int_input // 10
         product = product*l
     print(product)
+    if (int_input == 0):
+        print(0)
 if __name__ == "__main__":
     main()

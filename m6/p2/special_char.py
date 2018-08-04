@@ -9,9 +9,9 @@ def main():
     '''
     str_input = input()
     s1 = ' '
-    for char in str_input:
-    	if (char == '!' or '@' or '#' or '$' or '%' or '^' or '&' or '*'):
-    		char = s1
-    print(char)
+    for i in str_input:
+    	if (i == '!' or '@' or '#' or '$' or '%' or '^' or '&' or '*'):
+    		i = s1
+    print(i)
 if __name__ == "__main__":
     main()

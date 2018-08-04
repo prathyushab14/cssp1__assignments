@@ -7,10 +7,11 @@ def main():
     '''
     Read string from the input, store it in variable str_input.
     '''
-str_input = input()
-    for char in str_input:
-        if(char == '!', '@', '$', '%', '^', '&', '*'):
-            print(' ')
-print(str_input)
+    str_input = input()
+    s1 = ' '
+    if(str_input[:len(str_input)+1] == '!' or '@' or '$' or '%' or '^' or '&' or '*'):
+            print(str_input = s1)
+    else
+        print(str_input)
 if __name__ == "__main__":
     main()

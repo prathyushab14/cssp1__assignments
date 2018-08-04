@@ -12,15 +12,15 @@ def main():
     product = 1
     if int_input < 0:
         int_input = - (int_input)
-        l = int_input % 10
+        l_ = int_input % 10
         int_input = int_input // 10
-        product = - (product*l)
+        product = - (product*l_)
     if int_input == 0:
     	product = 0
     while(int_input >= 1):
-        l = int_input % 10
+        l_ = int_input % 10
         int_input = int_input // 10
-        product = product*l
+        product = product*l_
     print(product)
 if __name__ == "__main__":
     main()

@@ -12,7 +12,6 @@ def main():
     for char in str_input:
     	if (char == '!' or '@' or '#' or '$' or '%' or '^' or '&' or '*'):
     		char = s1
-        else:
-        	print(char)
+        print(char)
 if __name__ == "__main__":
     main()

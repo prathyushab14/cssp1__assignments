@@ -16,7 +16,7 @@ def main():
         int_input = int_input // 10
         product = - (product*la_)
     if int_input == 0:
-    	product = 0
+        product = 0
     while int_input >= 1:
         la_ = int_input % 10
         int_input = int_input // 10

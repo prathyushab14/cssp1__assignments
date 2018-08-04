@@ -10,11 +10,6 @@ def main():
     '''
     int_input = int(input())
     product = 1
-    while(int_input >= 1):
-        l = int_input % 10
-        int_input = int_input // 10
-        product = product*l
-    print(product)
     if (int_input < 0):
         int_input = - (int_input)
         l = int_input % 10
@@ -22,5 +17,10 @@ def main():
         product = - (product*l)
     if(int_input == 0):
         print(0)
+    while(int_input >= 1):
+        l = int_input % 10
+        int_input = int_input // 10
+        product = product*l
+    print(product)
 if __name__ == "__main__":
     main()

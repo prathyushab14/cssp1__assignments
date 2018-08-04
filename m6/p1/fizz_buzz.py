@@ -9,6 +9,14 @@ def main():
     Read number from the input, store it in variable num.
     '''
     num = int(input())
-
+    for i in range(num+1):
+    	if(i%3 == 0):
+    		print("Fizz")
+    	if(i%5 == 0):
+    		print("Buzz")
+    	if(i%3 == 0 and i%5 == 0):
+    	    print("FizzBuzz")
+    	else:
+    		print(i)
 if __name__ == "__main__":
     main()

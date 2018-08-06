@@ -34,6 +34,7 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
 	    monthly_unpaid_balance = temp_b - minimum_monthly_payment
 	    updated_balance_each_month = monthly_unpaid_balance + (monthly_unpaid_balance * monthly_interest_rate)
 	    temp_b = updated_balance_each_month
+	    no_of_months -= 1
 	print("remaining balance = ", temp_b)
 def main():
 	data = input()

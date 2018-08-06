@@ -1,5 +1,5 @@
 """bal"""
-def payingDebtOffInAYear(balance, annual_interest_rate, monthlypaymentrate):
+def payingdebtOffinayear(balance, annual_interest_rate, monthlypaymentrate):
     """payment"""
     temp_b = balance
     no_of_months = 12
@@ -16,6 +16,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Remaining balance:",payingDebtOffInAYear(data[0],data[1],data[2]))
+    print("Remaining balance:",payingdebtOffinayear(data[0],data[1],data[2]))
 if __name__ == "__main__":
     main()

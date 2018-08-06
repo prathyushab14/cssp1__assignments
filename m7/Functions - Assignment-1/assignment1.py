@@ -1,5 +1,5 @@
 """bal"""
-def paying_debt_offinayear(balance, annual_interest_rate, monthlypaymentrate):
+def paying_debt_offinayear(balance, a_i_r, monthlypaymentrate):
     """payment"""
     temp_b = balance
     no_of_months = 12

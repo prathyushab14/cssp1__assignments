@@ -4,11 +4,11 @@ def paying_debt_offinayear(balance, annual_interest_rate, monthlypaymentrate):
     temp_b = balance
     no_of_months = 12
     while no_of_months >= 1:
-        monthly_interest_rate = annual_interest_rate / 12.0
-        minimum_monthly_payment = monthlypaymentrate * temp_b
-        monthly_unpaid_balance = temp_b - minimum_monthly_payment
-        updated_balance_each_month = monthly_unpaid_balance + (monthly_unpaid_balance * monthly_interest_rate)
-        temp_b = updated_balance_each_month
+        m_i_r = a_i_r / 12.0
+        m_m_p = monthlypaymentrate * temp_b
+        m_u_b = temp_b - m_m_p
+        u_b_e_m = m_u_b + (m_u_b * m_i_r)
+        temp_b = u_b_e_m
         no_of_months -= 1
     return round(temp_b, 2)
 def main():

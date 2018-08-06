@@ -29,7 +29,7 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
 	temp_b = balance
 	no_of_months = 12
 	while no_of_months >= 1:
-        monthly_interest_rate = (annualInterestRate) / 12
+        monthly_interest_rate = annualInterestRate / 12.0
 	    minimum_monthly_payment = monthlyPaymentRate * temp_b
 	    monthly_unpaid_balance = temp_b - minimum_monthly_payment
 	    updated_balance_each_month = monthly_unpaid_balance + (monthly_unpaid_balance * monthly_interest_rate)

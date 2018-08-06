@@ -47,3 +47,4 @@ def main():
     print("Lowest Payment: " + str(round(paying_debt_off_in_a_year(data[0], data[1]), 2)))
 if __name__ == "__main__":
     main()
+    

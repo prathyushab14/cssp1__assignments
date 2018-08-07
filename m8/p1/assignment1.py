@@ -9,5 +9,5 @@ def main():
     """fact"""
     a_1 = input()
     print(factorial(int(a_1)))    
-if __name__== "__main__":
+if __name__ == "__main__":
     main()

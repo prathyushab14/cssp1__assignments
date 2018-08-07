@@ -1,4 +1,5 @@
-  '''
+def isin(char, astr, i_1):
+    '''
     char: a single character
     aStr: an alphabetized string
     returns: True if char is in aStr; False otherwise

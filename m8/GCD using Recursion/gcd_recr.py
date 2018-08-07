@@ -21,4 +21,4 @@ def main():
     print(gcdRecur(int(data[0]),int(data[1])))
 
 if __name__== "__main__":
-    main()
+	main()

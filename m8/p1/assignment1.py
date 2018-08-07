@@ -1,13 +1,13 @@
 """fact"""
-def factorial(n):
+def factorial(n_1):
     """fact"""
-    if n == 0 or n == 1:
+    if n_1 == 0 or n_1 == 1:
         return 1
     else:
-        return n * factorial(n-1)
+        return n_1 * factorial(n_1-1)
 def main():
     """fact"""
-    a = input()
+    a_1 = input()
     print(factorial(int(a)))    
 if __name__== "__main__":
     main()

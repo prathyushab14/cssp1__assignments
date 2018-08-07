@@ -8,6 +8,6 @@ def factorial(n_1):
 def main():
     """fact"""
     a_1 = input()
-    print(factorial(int(a)))    
+    print(factorial(int(a_1)))    
 if __name__== "__main__":
     main()

@@ -4,7 +4,7 @@ def is_word_guessed(secret_word, letters_guessed):
     cou = 0
     for i in range(len(secret_word)):
         for k in range(len(letters_guessed)):
-            if secret_word[i] == letters_guessed[j]:
+            if secret_word[i] == letters_guessed[k]:
                 cou += 1
     return bool(cou == len(secret_word))
 def main():

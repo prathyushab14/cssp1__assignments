@@ -9,17 +9,19 @@ def oddTuples(aTup):
     
     returns: tuple, every other element of aTup. 
     '''
-    for i in aTup:
-        if i%2 != 0
-    return i
+    tup= ()
+    for i in range(len(aTup)):
+        if i%2 != 0:
+            tup= tup + (aTup[i],)
+    return tup
     
 
 def main():
     data = input()
-    data = data.split()
+    data = data.split(',')
     aTup=()
     for j in range(len(data)):
-        aTup += (int(data[j]),)
+        aTup += ((data[j]),)
     print(oddTuples(aTup))
         
 

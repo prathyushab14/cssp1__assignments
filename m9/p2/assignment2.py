@@ -8,7 +8,7 @@ letters in letters_guessed are in secret_word. This shouldn't be too different f
 def get_guessed_word(secret_word, letters_guessed):
     l_1 = len(secret_word)
     l_2 = len(letters_guessed)
-    a_str = " "
+    a_str = ""
     for i in range(l_1):
         cou = 0
         for k in range(l_2):

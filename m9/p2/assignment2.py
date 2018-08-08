@@ -13,8 +13,9 @@ def get_guessed_word(secret_word, letters_guessed):
         cou = 0
         for k in range(l_2):
             if secret_word[i] == letters_guessed[k]:
+                if cou += 1
                 a_str = a_str + secret_word[i]
-                cou += 1
+            break
         if cou == 0:
             a_str = a_str + '_'
     return a_str

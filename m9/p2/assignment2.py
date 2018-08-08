@@ -1,10 +1,4 @@
-'''
-Exercise: Assignment-2
-Next, implement the function getGuessedWord that takes in two parameters
-a string, secret_word, and a list of letters, letters_guessed. This function
-returns a string that is comprised of letters and underscores, based on what
-letters in letters_guessed are in secret_word. This shouldn't be too different from isWordGuessed!
-'''
+"""secret word"""
 def get_guessed_word(secret_word, letters_guessed):
     l_1 = len(secret_word)
     l_2 = len(letters_guessed)

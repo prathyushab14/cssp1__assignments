@@ -1,5 +1,6 @@
 """secret word"""
 def get_guessed_word(secret_word, letters_guessed):
+    """guess"""
     l_1 = len(secret_word)
     l_2 = len(letters_guessed)
     a_str = ""

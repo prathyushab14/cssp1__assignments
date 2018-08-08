@@ -17,6 +17,7 @@ def get_guessed_word(secret_word, letters_guessed):
                 cou += 1
         if cou == 0:
             a_str = a_str + '_'
+    return a_str
 def main():
     """secret"""
     user_input = input()

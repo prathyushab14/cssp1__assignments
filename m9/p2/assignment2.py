@@ -16,7 +16,7 @@ def get_guessed_word(secret_word, letters_guessed):
                 cou += 1
                 if cou == 1:
                     a_str = a_str + secret_word[i]
-            break
+                break
         if cou == 0:
             a_str = a_str + '_'
     return a_str

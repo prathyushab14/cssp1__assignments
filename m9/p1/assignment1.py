@@ -2,8 +2,8 @@
 def is_word_guessed(secret_word, letters_guessed):
     """guess"""
     cou = 0
-    for i in range(len(secret_word))
-        for k in range(len(letters_guessed))
+    for i in range(len(secret_word)):
+        for k in range(len(letters_guessed)):
             if secret_word[i] == letters_guessed[j]:
                 cou += 1
     return bool(cou == len(secret_word))

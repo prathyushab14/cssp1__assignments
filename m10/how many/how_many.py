@@ -5,7 +5,7 @@
 def how_many(aDict):
     cou = 0
     for i in aDict:
-        for j in i:
+        for j in aDict[i]:
             cou = cou + 1
     return cou
         

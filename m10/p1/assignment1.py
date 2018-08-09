@@ -13,7 +13,7 @@ def get_available_letters(letters_guessed):
         s = s + dic[i]
     return s
 def main():
-   """string"""
+    """string"""
     user_input = input()
     user_input = user_input.split()
     data = []

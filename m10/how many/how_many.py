@@ -8,7 +8,6 @@ def how_many(aDict):
         for j in aDict[i]:
             cou = cou + 1
     return cou
-        
 def main():
     n=input()
     aDict={}

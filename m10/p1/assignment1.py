@@ -5,7 +5,7 @@ def get_available_letters(letters_guessed):
     s1_ = ''
     key1 = list(string.ascii_lowercase)
     val1 = key1
-    dic1 = dict(zip(key1,val1))
+    dic1 = dict(zip(key1, val1))
     for i in letters_guessed:
         if i in dic1.values():
             del dic1[i]

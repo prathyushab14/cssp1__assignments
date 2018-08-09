@@ -2,7 +2,7 @@
 def get_available_letters(letters_guessed):
     """dictionaries"""
     import string
-    s = ''
+    s1_ = ''
     key1 = list(string.ascii_lowercase)
     val1 = key1
     dic1 = dict(zip(key1,val1))
@@ -10,8 +10,8 @@ def get_available_letters(letters_guessed):
         if i in dic1.values():
             del dic1[i]
     for j in dic1.values():
-        s = s + dic1[j]
-    return s
+        s1_ = s1_ + dic1[j]
+    return s1_
 def main():
     """string"""
     user_input = input()

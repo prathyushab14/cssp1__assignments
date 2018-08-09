@@ -10,7 +10,7 @@ def get_available_letters(letters_guessed):
         if i in dic1.values():
             del dic1[i]
     for j in dic1.values():
-        s = s + dic1[i]
+        s = s + dic1[j]
     return s
 def main():
     """string"""

@@ -7,9 +7,9 @@ def get_available_letters(letters_guessed):
     val1 = key1
     dic1 = dict(zip(key1,val1))
     for i in letters_guessed:
-        if i in dic1.key1():
+        if i in dic1.keys():
             del dic1[i]
-    for j in dic1.key1():
+    for j in dic1.keys():
         s = s + dic[i]
     return s
 def main():

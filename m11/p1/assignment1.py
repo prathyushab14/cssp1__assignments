@@ -5,12 +5,12 @@ def get_word_score(word, n):
     's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
     length = len(word)
     sum = 0
-    if length <= n:
+    if length <= n_:
         for j in word:
             if j in dict1_.keys():
                 sum = sum + dict1_[j]
         sum = sum * length
-        if length == n:
+        if length == n_:
             sum = sum + 50
         return sum
     return "invalid"

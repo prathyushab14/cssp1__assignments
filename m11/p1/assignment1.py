@@ -13,8 +13,7 @@ def get_word_score(word, n):
         if length == n:
             sum = sum + 50
         return sum
-     
-return "invalid"
+    return "invalid"
 def main():
     """score"""
     data = input()

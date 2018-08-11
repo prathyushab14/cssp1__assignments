@@ -51,8 +51,7 @@ def create_social_network(data):
             dict1_[i] = list(i[0])
         else:
             dict1_[i] = dict1_.append(i[0])
-    print(dict1_)
-    return dict_
+    return dict1_
 
 def main():
     '''

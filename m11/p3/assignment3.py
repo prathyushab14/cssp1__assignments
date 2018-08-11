@@ -22,3 +22,4 @@ def main():
     print(is_valid_word(word_1, adict_1, l_2))
 if __name__ == "__main__":
     main()
+    

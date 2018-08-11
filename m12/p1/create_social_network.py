@@ -48,9 +48,9 @@ def create_social_network(data):
     dict1_ = {}
     for i in str1:
         if i not in dict1_:
-            dict1_[i] = list(i[0])
+            dict1_[i] = list(i.split("\n"))
         else:
-            dict1_[i] = dict1_.append(i.split(" ")[0])
+            dict1_[i] = dict1_.append([0])
     return dict1_
 
 def main():

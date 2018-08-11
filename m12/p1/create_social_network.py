@@ -36,10 +36,11 @@ def create_social_network(data):
     data = data.split("\n")
     dict_ = {}
     for i in data:
-    	if i.split().data[0] not in dict_:
-    		i.split().data[0]=list(i.split().data[1])
-    	else:
-    		i.split().data[0].append(i.split().data[1])
+    	for ele in i:
+    	    if ele.split(,).data[0] not in dict_:
+    		    ele.split().data[0]=list(ele.split().data[1])
+    	    else:
+    		    ele.split().data[0].append(ele.split().data[1])
     return dict_
 
 def main():

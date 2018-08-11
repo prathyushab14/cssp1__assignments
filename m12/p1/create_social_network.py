@@ -50,7 +50,7 @@ def create_social_network(data):
         if i not in dict1_:
             dict1_[i] = list(i.split("")[1])
         else:
-            dict1_[i] = dict1_.append(i.split("")[0])
+            dict1_[i] = dict1_.append(i.split(" ")[0])
     return dict1_
 
 def main():

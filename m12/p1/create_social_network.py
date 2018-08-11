@@ -44,7 +44,7 @@ def create_social_network(data):
     # 	    else:
     # 		    ele.split(',').data[0].append(ele.split(',').data[1])
     str1 = data
-    str1 = str1.split("follows")
+    str1 = str1.split("follows ")
     dict1_ = {}
     for i in str1:
         if i not in dict1_:

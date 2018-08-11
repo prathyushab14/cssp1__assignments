@@ -1,7 +1,6 @@
 '''
     Assignment-1 Create Social Network
 '''
-
 def create_social_network(data):
     '''
         The data argument passed to the function is a string
@@ -40,19 +39,14 @@ def create_social_network(data):
         else:
             dict1_[i] = dict1_.append([0])
     return dict1_
-
 def main():
-    '''
-        handling testcase input and printing output
-    '''
+    """handling test cases"""
     string = ''
     lines = int(input())
     for i in range(lines):
         i += 1
         string += input()
         string += '\n'
-
     print(create_social_network(string))
-
 if __name__ == "__main__":
     main()

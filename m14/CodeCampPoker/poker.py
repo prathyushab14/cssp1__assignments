@@ -15,9 +15,9 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     b1_ = []
-    for i in hand:
+    for i1_ in hand:
     # print(i)
-        a1_ = (i[0])
+        a1_ = (i1_[0])
     # print(a)
         if a1_ in dict1_.keys():
             a1_ = dict1_[a1_]
@@ -30,7 +30,7 @@ def is_straight(hand):
     # print(b)
     for k1_ in b1_:
         if k1_ in dict1_.keys():
-            b1_[k] = dict1_(b1_[k])
+            b1_[k1_] = dict1_(b1_[k1_])
     s1_ = 0
     allTrue = True
     while s1_ < len(b1_)-1:

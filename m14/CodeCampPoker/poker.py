@@ -14,14 +14,14 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    Di1_c = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+    DI_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b1_ = []
     for i1_ in hand:
     # print(i)
         a1_ = (i1_[0])
     # print(a)
-        if a1_ in Di1_c.keys():
-            a1_ = Di1_c[a1_]
+        if a1_ in DI_1.keys():
+            a1_ = DI_1[a1_]
     # print(a)
         a1_ = int(a1_)
     # print(type(a))
@@ -30,8 +30,8 @@ def is_straight(hand):
         b1_.sort()
     # print(b)
     for k1_ in b1_:
-        if k1_ in Di1_c.keys():
-            b1_[k1_] = Di1_c(b1_[k1_])
+        if k1_ in DI_1.keys():
+            b1_[k1_] = DI_1(b1_[k1_])
     s1_ = 0
     alltrue_ = True
     while s1_ < len(b1_)-1:

@@ -31,7 +31,7 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     str1 = data
-    str1 = str1.split("follows ")
+    str1 = str1.split(" follows ")
     dict1_ = {}
     for i in str1:
         if i not in dict1_:

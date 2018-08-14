@@ -39,8 +39,8 @@ def is_straight(hand):
             break
         s = s+1
     if allTrue:
-        return true
-    return false
+        return True
+return False
 
 def is_flush(hand):
     '''
@@ -67,9 +67,9 @@ while s < len(b)-1:
         break
     s = s+1
 if allTrue:
-    return true
+    return True
 else:
-    return false
+    return False
 
 
 

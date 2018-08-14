@@ -32,13 +32,13 @@ def is_straight(hand):
         if k1_ in dict1_.keys():
             b1_[k1_] = dict1_(b1_[k1_])
     s1_ = 0
-    allTrue = True
+    allTrue_ = True
     while s1_ < len(b1_)-1:
         if b1_[s1_+1] - b1_[s1_] != 1:
-            allTrue = False
+            allTrue_ = False
             break
         s1_ = s1_+1
-    if allTrue:
+    if allTrue_:
         return True
     return False
 
@@ -60,13 +60,13 @@ def is_flush(hand):
         b1_.append(a1_)
 # print(b)
     s1_ = 0
-    allTrue = True
+    allTrue_ = True
     while s1_ < len(b1_)-1:
         if b1_[s1_+1] != b1_[s1_]:
-            allTrue = False
+            allTrue_ = False
             break
         s1_ = s1_+1
-    if allTrue:
+    if allTrue_:
         return True
     return False
 

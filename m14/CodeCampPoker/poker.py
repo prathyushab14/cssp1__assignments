@@ -29,7 +29,7 @@ def is_straight(hand):
         b1_.sort()
     # print(b)
     for k1_ in b1_:
-        if k1_ in dict1.keys():
+        if k1_ in dict1_.keys():
             b1_[k] = dict1_(b1_[k])
     s1_ = 0
     allTrue = True

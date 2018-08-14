@@ -20,7 +20,7 @@ def is_straight(hand):
         a1_ = (i[0])
     # print(a)
         if a1_ in dict1.keys():
-            a1_ = dict1[a]
+            a1_ = dict1[a1_]
     # print(a)
         a1_ = int(a1_)
     # print(type(a))

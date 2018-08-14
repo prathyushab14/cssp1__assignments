@@ -40,8 +40,7 @@ while s < len(b)-1:
         s = s+1
 if allTrue:
     return true
-else:
-    return false
+return false
 
 def is_flush(hand):
     '''

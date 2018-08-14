@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-Dict1_ = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+DI1_ = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -19,8 +19,8 @@ def is_straight(hand):
     # print(i)
         a1_ = (i1_[0])
     # print(a)
-        if a1_ in Dict1_.keys():
-            a1_ = Dict1_[a1_]
+        if a1_ in DI1_.keys():
+            a1_ = DI1_[a1_]
     # print(a)
         a1_ = int(a1_)
     # print(type(a))
@@ -29,8 +29,8 @@ def is_straight(hand):
         b1_.sort()
     # print(b)
     for k1_ in b1_:
-        if k1_ in Dict1_.keys():
-            b1_[k1_] = Dict1_(b1_[k1_])
+        if k1_ in DI1_.keys():
+            b1_[k1_] = DI1_(b1_[k1_])
     s1_ = 0
     alltrue_ = True
     while s1_ < len(b1_)-1:

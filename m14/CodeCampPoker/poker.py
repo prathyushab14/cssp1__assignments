@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-DI1_ = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -14,6 +14,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
+    DI1_ = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b1_ = []
     for i1_ in hand:
     # print(i)

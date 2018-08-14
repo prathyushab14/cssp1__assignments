@@ -40,7 +40,7 @@ def is_straight(hand):
         s = s+1
     if allTrue:
         return True
-return False
+    return False
 
 def is_flush(hand):
     '''

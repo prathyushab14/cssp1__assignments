@@ -30,6 +30,7 @@ def is_straight(hand):
         b1_.sort()
     # print(b)
     for k1_ in b1_:
+        di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
         if k1_ in di_1.keys():
             b1_[k1_] = di_1(b1_[k1_])
     s1_ = 0

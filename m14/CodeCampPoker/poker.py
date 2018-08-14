@@ -51,24 +51,23 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-b = []
-for i in hand:
+    b = []
+    for i in hand:
     # print(i)
-    a = (i[1])
+        a = (i[1])
     # print(a)
     # print(type(a))
-    b.append(a)
+        b.append(a)
 # print(b)
-s = 0
-allTrue = True
-while s < len(b)-1:
-    if b[s+1] != b[s]:
-        allTrue = False
-        break
-    s = s+1
-if allTrue:
-    return True
-else:
+    s = 0
+    allTrue = True
+    while s < len(b)-1:
+        if b[s+1] != b[s]:
+            allTrue = False
+            break
+        s = s+1
+    if allTrue:
+        return True
     return False
 
 

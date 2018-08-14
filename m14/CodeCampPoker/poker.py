@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-
+dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -14,7 +14,34 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-
+b = []
+for i in hand:
+    # print(i)
+    a = (i[0])
+    # print(a)
+    if a in dict1.keys():
+        a = dict1[a]
+    # print(a)
+    a = int(a)
+    # print(type(a))
+    b.append(a)
+# print(b)
+b.sort()
+# print(b)
+for k in b:
+    if k in dict1.keys():
+        b[k] = dict1(b[k])
+s = 0
+allTrue = True
+while s < len(b)-1:
+        if b[s+1] - b[s] != 1:
+            allTrue = False
+            break
+        s = s+1
+if allTrue:
+    return true
+else:
+    return false
 
 def is_flush(hand):
     '''
@@ -25,8 +52,26 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    for i in hand:
-        a = i[1]
+b = []
+for i in hand:
+    # print(i)
+    a = (i[1])
+    # print(a)
+    # print(type(a))
+    b.append(a)
+# print(b)
+s = 0
+allTrue = True
+while s < len(b)-1:
+    if b[s+1] != b[s]:
+        allTrue = False
+        break
+    s = s+1
+if allTrue:
+    return true
+else:
+    return false
+
 
 
 def hand_rank(hand):
@@ -53,7 +98,13 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    return 1
+    if is_straight(hand) and is_flush(hand):
+        return 3
+    if is_flush(hand):
+        return 2
+    if is_straight(hand):
+        return 1
+    return 0
 
 def poker(hands):
     '''

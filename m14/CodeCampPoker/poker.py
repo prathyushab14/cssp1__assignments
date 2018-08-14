@@ -14,30 +14,30 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    b = []
+    b1_ = []
     for i in hand:
     # print(i)
-        a = (i[0])
+        a1_ = (i[0])
     # print(a)
-        if a in dict1.keys():
-            a = dict1[a]
+        if a1_ in dict1.keys():
+            a1_ = dict1[a]
     # print(a)
-        a = int(a)
+        a1_ = int(a1_)
     # print(type(a))
-        b.append(a)
+        b1_.append(a1_)
     # print(b)
-        b.sort()
+        b1_.sort()
     # print(b)
-    for k in b:
-        if k in dict1.keys():
-            b[k] = dict1(b[k])
-    s = 0
+    for k1_ in b1_:
+        if k1_ in dict1.keys():
+            b1_[k] = dict1(b1_[k])
+    s1_ = 0
     allTrue = True
-    while s < len(b)-1:
-        if b[s+1] - b[s] != 1:
+    while s1_ < len(b1_)-1:
+        if b1_[s1_+1] - b1_[s1_] != 1:
             allTrue = False
             break
-        s = s+1
+        s1_ = s1_+1
     if allTrue:
         return True
     return False
@@ -51,21 +51,21 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    b = []
-    for i in hand:
+    b1_ = []
+    for i1_ in hand:
     # print(i)
-        a = (i[1])
+        a1_ = (i1_[1])
     # print(a)
     # print(type(a))
-        b.append(a)
+        b1_.append(a1_)
 # print(b)
-    s = 0
+    s1_ = 0
     allTrue = True
-    while s < len(b)-1:
-        if b[s+1] != b[s]:
+    while s1_ < len(b1_)-1:
+        if b1_[s1_+1] != b1_[s1_]:
             allTrue = False
             break
-        s = s+1
+        s1_ = s1_+1
     if allTrue:
         return True
     return False
@@ -137,4 +137,3 @@ if __name__ == "__main__":
         # print(HANDS)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-

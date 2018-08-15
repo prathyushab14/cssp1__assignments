@@ -3,6 +3,118 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+def is_fourakind(hand):
+    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+    b = []
+    for i in hand:
+        # print(i)
+        a = (i[0])
+        # print(a)
+        if a in dict1.keys():
+            a = dict1[a]
+        # print(a)
+        a = int(a)
+        # print(type(a))
+        b.append(a)
+    # print(b)
+    b.sort()
+    # print(b)
+    for k in b:
+        if k in dict1.keys():
+            b[k] = dict1(b[k])
+    for ele in b:
+        if b.count(ele) == 4:
+            return True
+            exit()
+    return False
+def is_threeakind(hand):
+    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+    b = []
+    for i in hand:
+        print(i)
+        a = (i[0])
+        print(a)
+        if a in dict1.keys():
+            a = dict1[a]
+        print(a)
+        a = int(a)
+        print(type(a))
+        b.append(a)
+    print(b)
+    b.sort()
+    print(b)
+    for k in b:
+        if k in dict1.keys():
+            b[k] = dict1(b[k])
+    suit_set = set(b)
+    l =  len(suit_set)
+    print(suit_set)
+    print(l)
+    if l == 3:
+        return True
+    else:
+        return False
+def is_twopair(hand):
+    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+    b = []
+    for i in hand:
+        # print(i)
+        a = (i[0])
+        # print(a)
+        if a in dict1.keys():
+            a = dict1[a]
+        # print(a)
+        a = int(a)
+        # print(type(a))
+        b.append(a)
+    # print(b)
+    b.sort()
+    # print(b)
+    for k in b:
+        if k in dict1.keys():
+            b[k] = dict1(b[k])
+    x = 0
+    for ele in b:
+        if b.count(ele) == 2:
+            x += 1
+        if x == 2:
+            return True
+            exit()
+    return False
+def is_onepair(hand):
+    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+    b = []
+    for i in hand:
+        # print(i)
+        a = (i[0])
+        # print(a)
+        if a in dict1.keys():
+            a = dict1[a]
+        # print(a)
+        a = int(a)
+        # print(type(a))
+        b.append(a)
+    # print(b)
+    b.sort()
+    # print(b)
+    for k in b:
+        if k in dict1.keys():
+            b[k] = dict1(b[k])
+    one_pair = set(b)
+    allTrue = True
+    if len(one_pair) == 4:
+        allTrue = True
+    else:
+        allTrue = False
+    if allTrue:
+        return True
+    else:
+        return False
+def is_fullhouse(hand):
+    if is_threeakind(hand) and is_onepair(hand):
+        return True
+    else:
+        return False
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -99,10 +211,20 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
         return 1
+    if is_fourakind(hand):
+        return 2
+    if is_fullhouse(hand):
+        return 3
     if is_flush(hand):
         return 4
     if is_straight(hand):
         return 5
+    if is_threeakind(hand):
+        return 6
+    if is_twopair(hand):
+        return 7
+    if is_onepair(hand):
+        return 8
     # if two_pair(hand):
     #     return 7
     # if three_ofakind(hand):

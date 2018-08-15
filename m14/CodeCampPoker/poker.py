@@ -55,7 +55,7 @@ def is_threeakind(hand):
     else:
         return False
 def is_twopair(hand):
-    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+    dict1 = {'A': 14, 'K': 1, 'Q': 12, 'J':11, 'T':10}
     b = []
     for i in hand:
         # print(i)

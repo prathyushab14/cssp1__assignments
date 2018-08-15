@@ -3,6 +3,37 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+def three_ofakind(hand):
+    b = []
+    for i in hand:
+        # print(i)
+        a = (i[0])
+        # print(a)
+        if a in dict1.keys():
+            a = dict1[a]
+        # print(a)
+        a = int(a)
+        # print(type(a))
+        b.append(a)
+    # print(b)
+    b.sort()
+    # print(b)
+    for k in b:
+        if k in dict1.keys():
+            b[k] = dict1(b[k])
+    suit_set = set(b)
+    allTrue = True
+    l =  len(suit_set)
+    # print(suit_set)
+    # print(l)
+    if l == 2:
+        allTrue = True
+    else:
+        allTrue = False
+    if allTrue:
+        return True
+    else:
+        return False 
 def two_pair(hand):
     dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b = []

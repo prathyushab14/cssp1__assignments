@@ -25,7 +25,6 @@ def is_fourakind(hand):
     for ele in b:
         if b.count(ele) == 4:
             return True
-            exit()
     return False
 def is_threeakind(hand):
     dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
@@ -52,10 +51,9 @@ def is_threeakind(hand):
     # print(l)
     if l == 3:
         return True
-    else:
-        return False
+    return False
 def is_twopair(hand):
-    dict1 = {'A': 14, 'K': 1, 'Q': 12, 'J':11, 'T':10}
+    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b = []
     for i in hand:
         # print(i)
@@ -79,7 +77,6 @@ def is_twopair(hand):
             x += 1
         if x == 2:
             return True
-            exit()
     return False
 def is_onepair(hand):
     dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
@@ -101,20 +98,13 @@ def is_onepair(hand):
         if k in dict1.keys():
             b[k] = dict1(b[k])
     one_pair = set(b)
-    allTrue = True
     if len(one_pair) == 4:
-        allTrue = True
-    else:
-        allTrue = False
-    if allTrue:
         return True
-    else:
-        return False
+    return False
 def is_fullhouse(hand):
     if is_threeakind(hand) and is_onepair(hand):
         return True
-    else:
-        return False
+    return False
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?

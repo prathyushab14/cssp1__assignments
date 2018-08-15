@@ -4,6 +4,7 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def three_ofakind(hand):
+    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b = []
     for i in hand:
         # print(i)
@@ -165,6 +166,8 @@ def hand_rank(hand):
         return 5
     if two_pair(hand):
         return 7
+    if three_ofakind(hand):
+        return 6
     return 0
 
 def poker(hands):

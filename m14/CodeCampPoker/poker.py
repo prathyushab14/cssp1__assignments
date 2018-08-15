@@ -31,25 +31,25 @@ def is_threeakind(hand):
     dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b = []
     for i in hand:
-        print(i)
+        # print(i)
         a = (i[0])
-        print(a)
+        # print(a)
         if a in dict1.keys():
             a = dict1[a]
-        print(a)
+        # print(a)
         a = int(a)
-        print(type(a))
+        # print(type(a))
         b.append(a)
-    print(b)
+    # print(b)
     b.sort()
-    print(b)
+    # print(b)
     for k in b:
         if k in dict1.keys():
             b[k] = dict1(b[k])
     suit_set = set(b)
     l =  len(suit_set)
-    print(suit_set)
-    print(l)
+    # print(suit_set)
+    # print(l)
     if l == 3:
         return True
     else:

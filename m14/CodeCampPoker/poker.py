@@ -167,7 +167,6 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b1_ = []
     for i1_ in hand:
     # print(i)

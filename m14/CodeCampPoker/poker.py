@@ -115,7 +115,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    print(hand)
+    #print(hand)
     di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b1_ = []
     for i1_ in hand:
@@ -201,27 +201,21 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-        return 1
+        return 8
     if is_fourakind(hand):
-        return 2
+        return 7
     if is_fullhouse(hand):
         return 3
     if is_flush(hand):
-        return 4
-    if is_straight(hand):
         return 5
+    if is_straight(hand):
+        return 4
     if is_threeakind(hand):
-        return 6
+        return 3
     if is_twopair(hand):
-        return 7
+        return 2
     if is_onepair(hand):
-        return 8
-    # if two_pair(hand):
-    #     return 7
-    # if three_ofakind(hand):
-    #     return 6
-    # if one_pair(hand):
-    #     return 8
+        return 1
     return 9
 
 def poker(hands):
@@ -243,7 +237,6 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
     return max(hands, key=hand_rank)
-
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())

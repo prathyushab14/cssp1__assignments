@@ -13,7 +13,7 @@ def is_straight(hand):
     if face_values == [14, 5, 4, 3, 2]:
         face_values = [5, 4, 3, 2, 1]
     set_facevalues = set(face_values)
-    return (len(set_facevalues) == 5) and ((max(set_facevalues) - min(set_facevalues))==4)
+    return (len(set_facevalues) == 5) and ((max(set_facevalues) - min(set_facevalues)) == 4)
 def is_flush(hand):
     """flush"""
     set_ = set([suite for face, suite in hand])
@@ -28,7 +28,7 @@ def hand_rank(hand):
             (5, face_values) if is_flush(hand) else
             (4, face_values) if is_straight(hand) else
             (3, kind(face_values, 3), face_values) if kind(face_values, 3) else
-            (2, kind(face_values, 2), kind(sorted(face_values), 2), face_values) 
+            (2, kind(face_values, 2), kind(sorted(face_values), 2), face_values)
             if kind(face_values, 2) and kind(sorted(face_values), 2) else
             (1, kind(face_values, 2), face_values) if kind(face_values, 2) else
             (0, face_values))

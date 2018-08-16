@@ -1,208 +1,32 @@
-'''
-    Write a program to evaluate poker hands and determine the winner
-    Read about poker hands here.
-    https://en.wikipedia.org/wiki/List_of_poker_hands
-'''
-def is_fourakind(hand):
-    """four"""
-    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
-    b1_ = []
-    for i1_ in hand:
-        # print(i)
-        a1_ = (i1_[0])
-        # print(a)
-        if a1_ in di_1.keys():
-            a1_ = di_1[a1_]
-        # print(a)
-        a1_ = int(a1_)
-        # print(type(a))
-        b1_.append(a1_)
-    # print(b)
-    b1_.sort()
-    # print(b)
-    for i1_ in b1_:
-        if b1_.count(i1_) == 4:
-            return True
-    return False
-def is_threeakind(hand):
-    """three"""
-    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
-    b1_ = []
-    for i1_ in hand:
-        # print(i)
-        a1_ = (i1_[0])
-        # print(a)
-        if a1_ in di_1.keys():
-            a1_ = di_1[a1_]
-        # print(a)
-        a1_ = int(a1_)
-        # print(type(a))
-        b1_.append(a1_)
-    # print(b)
-    b1_.sort()
-    # print(b)
-    c1_ = set(b1_)
-    e1_ = len(c1_)
-    c1_ = 0
-    for i1_ in b1_:
-        if b1_.count(i1_) == 3:
-            c1_ += 1
-    if c1_ == 3 and e1_ == 3:
-        return True
-    return False
-def is_twopair(hand):
-    """twopair"""
-    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
-    b1_ = []
-    for i1_ in hand:
-        # print(i)
-        a1_ = (i1_[0])
-        # print(a)
-        if a1_ in di_1.keys():
-            a1_ = di_1[a1_]
-        # print(a)
-        a1_ = int(a1_)
-        # print(type(a))
-        b1_.append(a1_)
-    # print(b)
-    b1_.sort()
-    # print(b)
-    c1_ = set(b1_)
-    d1_ = len(c1_)
-    e1_ = 0
-    for i1_ in b1_:
-        if b1_.count(i1_) == 2:
-            e1_ += 1
-    if e1_ == 4 and d1_ == 3:
-        return True
-    return False
-def is_onepair(hand):
-    """onepair"""
-    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
-    b1_ = []
-    for i1_ in hand:
-        # print(i)
-        a1_ = (i1_[0])
-        # print(a)
-        if a1_ in di_1.keys():
-            a1_ = di_1[a1_]
-        # print(a)
-        a1_ = int(a1_)
-        # print(type(a))
-        b1_.append(a1_)
-    # print(b)
-    b1_.sort()
-    # print(b)
-    c1_ = 0
-    for i1_ in b1_:
-        if b1_.count(i1_) == 2:
-            c1_ += 1
-    if c1_ == 2:
-        return True
-    return False
-def is_fullhouse(hand):
-    """fullhouse"""
-    di_1 = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10}
-    b1_ = []
-    for i1_ in hand:
-        #print (i)
-        a1_ = i1_[0]
-        #print(a)
-        if a1_ in di_1.keys():
-            a1_ = di_1[a1_]
-        #print (a)
-        a1_ = int(a1_)
-        b1_.append(a1_)
-    #print(b)
-    c1_ = 0
-    d1_ = 0
-    for i1_ in b1_:
-        if b1_.count(i1_) == 3:
-            c1_ = 1
-        if b1_.count(i1_) == 2:
-            d1_ = 1
-    if c1_ == 1 and d1_ == 1:
-        return True
-    return False
+def kind(face_values, num)
+    for face in face_values:
+        if face_values.count(face) == num
+            return face
+def get_facevales(hand):
+    return sorted(['--23456789TJQKA'.index(face) for face, suite in hand], reverse = True)
 def is_straight(hand):
-    '''
-        How do we find out if the given hand is a straight?
-        The hand has a list of cards represented as strings.
-        There are multiple ways of checking if the hand is a straight.
-        Do we need both the characters in the string? No.
-        The first character is good enough to determine a straight
-        Think of an algorithm: given the card face value how to check if it a straight
-        Write the code for it and return True if it is a straight else return False
-    '''
-    #print(hand)
-    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
-    b1_ = []
-    for i1_ in hand:
-    # print(i)
-        a1_ = (i1_[0])
-    # print(a)
-        if a1_ in di_1.keys():
-            a1_ = di_1[a1_]
-    # print(a)
-        a1_ = int(a1_)
-    # print(type(a))
-        b1_.append(a1_)
-    # print(b)
-        b1_.sort()
-    # print(b)
-    d1_ = max(b1_)
-    e1_ = min(b1_)
-    f1_ = d1_ - e1_
-    l1_ = len(b1_)
-    if f1_ == 4 and l1_ == 5:
-        return True
-    return False
-
+    face_values = get_facevalues(hand)
+    if face_values == [14,5,4,3,2,]:
+        face_values = [5,4,3,2,1]
+    set_facevalues = set(face_values)
+    return len(set_facevalues == 5) and ((max(set_facevalues) - min(set_facevalues))==4)
 def is_flush(hand):
-    '''
-        How do we find out if the given hand is a flush?
-        The hand has a list of cards represented as strings.
-        Do we need both the characters in the string? No.
-        The second character is good enough to determine a flush
-        Think of an algorithm: given the card suite how to check if it is a flush
-        Write the code for it and return True if it is a flush else return False
-    '''
-    b1_ = []
-    for i1_ in hand:
-    # print(i)
-        a1_ = (i1_[1])
-    # print(a)
-    # print(type(a))
-        b1_.append(a1_)
-# print(b)
-    c1_ = set(b1_)
-    d1_ = len(c1_)
-    if d1_ == 1:
-        return True
-    return False
-
-
-
+    set_ = set([suite for face, suite in hand])
+    return len(set_) == 1
 def hand_rank(hand):
     """hand rank"""
-    if is_straight(hand) and is_flush(hand):
-        return 8
-    if is_fourakind(hand):
-        return 7
-    if is_fullhouse(hand):
-        return 3
-    if is_flush(hand):
-        return 5
-    if is_straight(hand):
-        return 4
-    if is_threeakind(hand):
-        return 3
-    if is_twopair(hand):
-        return 2
-    if is_onepair(hand):
-        return 1
-    return 0
-
+    face_values = get_facevalues(hand)
+    return ((8, face_values) if is_flush(hand) and is_straight(hand) else
+            (7, kind(face_values, 4), face_values) if kind(face_values, 4) else
+            (6, kind(face_values, 3), kind(face_values, 2)) 
+            if  kind(face_values, 3) and kind(face_values, 2) else
+            (5, face_values) if is_flush(hand) else
+            (4, face_values) if is_straight(hand) else
+            (3, kind(face_values, 3), face_values) if kind(face_values, 3) else
+            (2, kind(face_values, 2), kind(sorted(face_values), 2), face_values) 
+            if kind(face_values, 2) and kind(sorted(face_values), 2) else
+            (1, kind(face_values, 2), face_values) if kind(face_values, 2) else
+            (0, face_values))
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.

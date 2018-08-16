@@ -19,8 +19,6 @@ def is_fourakind(hand):
     # print(b)
     b.sort()
     # print(b)
-    x = 0
-    c = 0
     for i in b:
         if b.count(i) == 4:
             return True

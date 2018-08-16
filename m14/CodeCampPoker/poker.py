@@ -1,4 +1,4 @@
-def kind(face_values, num)
+def kind(face_values, num):
     for face in face_values:
         if face_values.count(face) == num
             return face

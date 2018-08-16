@@ -68,7 +68,7 @@ def is_twopair(hand):
     d1_ = len(c1_)
     e1_ = 0
     for i1_ in b1_:
-        if b1_.count(i) == 2:
+        if b1_.count(i1_) == 2:
             e1_ += 1
     if e1_ == 4 and d1_ == 3:
         return True

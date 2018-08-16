@@ -9,7 +9,7 @@ def is_straight(hand):
     if face_values == [14,5,4,3,2,]:
         face_values = [5,4,3,2,1]
     set_facevalues = set(face_values)
-    return len(set_facevalues == 5) and ((max(set_facevalues) - min(set_facevalues))==4)
+    return (len(set_facevalues) == 5) and ((max(set_facevalues) - min(set_facevalues))==4)
 def is_flush(hand):
     set_ = set([suite for face, suite in hand])
     return len(set_) == 1

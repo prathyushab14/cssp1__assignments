@@ -72,7 +72,7 @@ def is_twopair(hand):
     for i in b:
         if b.count(i) == 2:
             c += 1
-    if c ==4 and d==3:
+    if c == 4 and d == 3:
         return True
     return False
 def is_onepair(hand):
@@ -156,7 +156,7 @@ def is_flush(hand):
 # print(b)
     c = set(b)
     d = len(c)
-    if d ==1:
+    if d == 1:
         return True
     return False
 

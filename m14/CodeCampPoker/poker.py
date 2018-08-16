@@ -47,7 +47,7 @@ def is_threeakind(hand):
     for i in b:
         if b.count(i) == 3:
             c += 1
-    if c == 3 and e == 3
+    if c == 3 and e == 3:
         return True
     return False
 def is_twopair(hand):

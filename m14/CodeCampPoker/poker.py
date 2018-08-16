@@ -10,8 +10,8 @@ def is_fourakind(hand):
         # print(i)
         a1_ = (i1_[0])
         # print(a)
-        if a1_ in dict1.keys():
-            a1_ = dict1[a1_]
+        if a1_ in di_1.keys():
+            a1_ = di_1[a1_]
         # print(a)
         a1_ = int(a1_)
         # print(type(a))

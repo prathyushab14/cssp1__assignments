@@ -1,20 +1,25 @@
+"""kindof"""
 def kind(face_values, num):
+    """returning face values"""
     for face in face_values:
         if face_values.count(face) == num:
             return face
 def get_facevalues(hand):
+    """facevalues"""
     return sorted(['--23456789TJQKA'.index(face) for face, suite in hand], reverse = True)
 def is_straight(hand):
+    """straight"""
     face_values = get_facevalues(hand)
-    if face_values == [14,5,4,3,2,]:
-        face_values = [5,4,3,2,1]
+    if face_values == [14, 5, 4, 3, 2]:
+        face_values = [5, 4, 3, 2, 1]
     set_facevalues = set(face_values)
     return (len(set_facevalues) == 5) and ((max(set_facevalues) - min(set_facevalues))==4)
 def is_flush(hand):
+    """flush"""
     set_ = set([suite for face, suite in hand])
     return len(set_) == 1
 def hand_rank(hand):
-    """hand rank"""
+    """handrank"""
     face_values = get_facevalues(hand)
     return ((8, face_values) if is_flush(hand) and is_straight(hand) else
             (7, kind(face_values, 4), face_values) if kind(face_values, 4) else

@@ -4,6 +4,7 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def is_fourakind(hand):
+    """four"""
     di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b1_ = []
     for i1_ in hand:
@@ -24,6 +25,7 @@ def is_fourakind(hand):
             return True
     return False
 def is_threeakind(hand):
+    """three"""
     di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b1_ = []
     for i1_ in hand:
@@ -49,6 +51,7 @@ def is_threeakind(hand):
         return True
     return False
 def is_twopair(hand):
+    """twopair"""
     di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b1_ = []
     for i1_ in hand:
@@ -74,6 +77,7 @@ def is_twopair(hand):
         return True
     return False
 def is_onepair(hand):
+    """onepair"""
     di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b1_ = []
     for i1_ in hand:
@@ -97,6 +101,7 @@ def is_onepair(hand):
         return True
     return False
 def is_fullhouse(hand):
+    """fullhouse"""
     di_1 = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10}
     b1_ = []
     for i1_ in hand:

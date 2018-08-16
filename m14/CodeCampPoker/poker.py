@@ -19,11 +19,10 @@ def is_fourakind(hand):
     # print(b)
     b.sort()
     # print(b)
-    for k in b:
-        if k in dict1.keys():
-            b[k] = dict1(b[k])
-    for ele in b:
-        if b.count(ele) == 4:
+    x = 0
+    c = 0
+    for i in b:
+        if b.count(i) == 4:
             return True
     return False
 def is_threeakind(hand):
@@ -42,14 +41,13 @@ def is_threeakind(hand):
     # print(b)
     b.sort()
     # print(b)
-    for k in b:
-        if k in dict1.keys():
-            b[k] = dict1(b[k])
-    suit_set = set(b)
-    l =  len(suit_set)
-    # print(suit_set)
-    # print(l)
-    if l == 3:
+    c = set(b)
+    e = len(c)
+    c = 0
+    for i in b:
+        if b.count(i) == 3:
+            c += 1
+    if c == 3 and e == 3
         return True
     return False
 def is_twopair(hand):
@@ -68,15 +66,14 @@ def is_twopair(hand):
     # print(b)
     b.sort()
     # print(b)
-    for k in b:
-        if k in dict1.keys():
-            b[k] = dict1(b[k])
-    x = 0
-    for ele in b:
-        if b.count(ele) == 2:
-            x += 1
-        if x == 2:
-            return True
+    c = set(b)
+    d = len(c)
+    c = 0
+    for i in b:
+        if b.count(i) == 2:
+            c += 1
+    if c ==4 and d==3:
+        return True
     return False
 def is_onepair(hand):
     dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
@@ -94,11 +91,11 @@ def is_onepair(hand):
     # print(b)
     b.sort()
     # print(b)
-    for k in b:
-        if k in dict1.keys():
-            b[k] = dict1(b[k])
-    one_pair = set(b)
-    if len(one_pair) == 4:
+    c = 0
+    for i in b:
+        if b.count(i) == 2:
+            c += 1
+    if c == 2:
         return True
     return False
 def is_fullhouse(hand):
@@ -131,18 +128,11 @@ def is_straight(hand):
     # print(b)
         b1_.sort()
     # print(b)
-    for k1_ in b1_:
-        di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
-        if k1_ in di_1.keys():
-            b1_[k1_] = di_1(b1_[k1_])
-    s1_ = 0
-    alltrue_ = True
-    while s1_ < len(b1_)-1:
-        if b1_[s1_+1] - b1_[s1_] != 1:
-            alltrue_ = False
-            break
-        s1_ = s1_+1
-    if alltrue_:
+    d = max(b)
+    e = min(b)
+    f = d - e
+    l = len(b)
+    if f == 4 and l == 5:
         return True
     return False
 
@@ -155,6 +145,7 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
+    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
     b1_ = []
     for i1_ in hand:
     # print(i)
@@ -163,14 +154,9 @@ def is_flush(hand):
     # print(type(a))
         b1_.append(a1_)
 # print(b)
-    s1_ = 0
-    alltrue_ = True
-    while s1_ < len(b1_)-1:
-        if b1_[s1_+1] != b1_[s1_]:
-            alltrue_ = False
-            break
-        s1_ = s1_+1
-    if alltrue_:
+    c = set(b)
+    d = len(c)
+    if d ==1:
         return True
     return False
 
@@ -216,7 +202,7 @@ def hand_rank(hand):
         return 2
     if is_onepair(hand):
         return 1
-    return 9
+    return 0
 
 def poker(hands):
     '''

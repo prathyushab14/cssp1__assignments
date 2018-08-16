@@ -66,11 +66,11 @@ def is_twopair(hand):
     # print(b)
     c = set(b)
     d = len(c)
-    c = 0
+    e = 0
     for i in b:
         if b.count(i) == 2:
-            c += 1
-    if c == 4 and d == 3:
+            e += 1
+    if e == 4 and d == 3:
         return True
     return False
 def is_onepair(hand):
@@ -97,7 +97,26 @@ def is_onepair(hand):
         return True
     return False
 def is_fullhouse(hand):
-    if is_threeakind(hand) and is_onepair(hand):
+    dict1={'A':14, 'K':13, 'Q':12, 'J':11,'T':10}
+    b=[]
+    for i in hand:
+        #print (i)
+        a = i[0]
+        #print(a)
+        if a in dict1.keys():
+            a=dict1[a]
+        #print (a)
+        a=int(a)
+        b.append(a)
+    #print(b)
+    c=0
+    d=0
+    for i in b:
+        if b.count(i)==3:
+            c=1
+        if b.count(i)==2:
+            d=1
+    if c==1 and d==1:
         return True
     return False
 def is_straight(hand):

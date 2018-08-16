@@ -49,7 +49,7 @@ def hangman(secretWord):
     """hangman"""
     print("the guessed word has",len(secretWord), "letters")
     print("Guess a letter")
-    guess = 10
+    guess = 3
     letters_guessed = ""
     while guess>0 and (not is_word_guessed(secretWord, letters_guessed)):
         inp_t = input("enter the guess")

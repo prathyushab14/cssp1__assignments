@@ -4,119 +4,119 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def is_fourakind(hand):
-    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
-    b = []
-    for i in hand:
+    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+    b1_ = []
+    for i1_ in hand:
         # print(i)
-        a = (i[0])
+        a1_ = (i1_[0])
         # print(a)
-        if a in dict1.keys():
-            a = dict1[a]
+        if a1_ in dict1.keys():
+            a1_ = dict1[a1_]
         # print(a)
-        a = int(a)
+        a1_ = int(a1_)
         # print(type(a))
-        b.append(a)
+        b1_.append(a1_)
     # print(b)
-    b.sort()
+    b1_.sort()
     # print(b)
-    for i in b:
-        if b.count(i) == 4:
+    for i1_ in b1_:
+        if b1_.count(i1_) == 4:
             return True
     return False
 def is_threeakind(hand):
-    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
-    b = []
-    for i in hand:
+    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+    b1_ = []
+    for i1_ in hand:
         # print(i)
-        a = (i[0])
+        a1_ = (i1_[0])
         # print(a)
-        if a in dict1.keys():
-            a = dict1[a]
+        if a1_ in di_1.keys():
+            a1_ = di_1[a1_]
         # print(a)
-        a = int(a)
+        a1_ = int(a1_)
         # print(type(a))
-        b.append(a)
+        b1_.append(a1_)
     # print(b)
-    b.sort()
+    b1_.sort()
     # print(b)
-    c = set(b)
-    e = len(c)
-    c = 0
-    for i in b:
-        if b.count(i) == 3:
-            c += 1
-    if c == 3 and e == 3:
+    c1_ = set(b1_)
+    e1_ = len(c1_)
+    c1_ = 0
+    for i1_ in b1_:
+        if b1_.count(i1_) == 3:
+            c1_ += 1
+    if c1_ == 3 and e1_ == 3:
         return True
     return False
 def is_twopair(hand):
-    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
-    b = []
-    for i in hand:
+    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+    b1_ = []
+    for i1_ in hand:
         # print(i)
-        a = (i[0])
+        a1_ = (i1_[0])
         # print(a)
-        if a in dict1.keys():
-            a = dict1[a]
+        if a1_ in di_1.keys():
+            a1_ = di_1[a1_]
         # print(a)
-        a = int(a)
+        a1_ = int(a1_)
         # print(type(a))
-        b.append(a)
+        b1_.append(a1_)
     # print(b)
-    b.sort()
+    b1_.sort()
     # print(b)
-    c = set(b)
-    d = len(c)
-    e = 0
-    for i in b:
-        if b.count(i) == 2:
-            e += 1
-    if e == 4 and d == 3:
+    c1_ = set(b1_)
+    d1_ = len(c1_)
+    e1_ = 0
+    for i1_ in b1_:
+        if b1_.count(i) == 2:
+            e1_ += 1
+    if e1_ == 4 and d1_ == 3:
         return True
     return False
 def is_onepair(hand):
-    dict1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
-    b = []
-    for i in hand:
+    di_1 = {'A': 14, 'K': 13, 'Q': 12, 'J':11, 'T':10}
+    b1_ = []
+    for i1_ in hand:
         # print(i)
-        a = (i[0])
+        a1_ = (i1_[0])
         # print(a)
-        if a in dict1.keys():
-            a = dict1[a]
+        if a1_ in di_1.keys():
+            a1_ = di_1[a1_]
         # print(a)
-        a = int(a)
+        a1_ = int(a1_)
         # print(type(a))
-        b.append(a)
+        b1_.append(a1_)
     # print(b)
-    b.sort()
+    b1_.sort()
     # print(b)
-    c = 0
-    for i in b:
-        if b.count(i) == 2:
-            c += 1
-    if c == 2:
+    c1_ = 0
+    for i1_ in b1_:
+        if b1_.count(i1_) == 2:
+            c1_ += 1
+    if c1_ == 2:
         return True
     return False
 def is_fullhouse(hand):
-    dict1 = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10}
-    b = []
-    for i in hand:
+    di_1 = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10}
+    b1_ = []
+    for i1_ in hand:
         #print (i)
-        a = i[0]
+        a1_ = i1_[0]
         #print(a)
-        if a in dict1.keys():
-            a = dict1[a]
+        if a1_ in di_1.keys():
+            a1_ = di_1[a1_]
         #print (a)
-        a = int(a)
-        b.append(a)
+        a1_ = int(a1_)
+        b1_.append(a1_)
     #print(b)
-    c = 0
-    d = 0
-    for i in b:
-        if b.count(i) == 3:
-            c = 1
-        if b.count(i) == 2:
-            d = 1
-    if c == 1 and d == 1:
+    c1_ = 0
+    d1_ = 0
+    for i1_ in b1_:
+        if b1_.count(i1_) == 3:
+            c1_ = 1
+        if b1_.count(i1_) == 2:
+            d1_ = 1
+    if c1_ == 1 and d1_ == 1:
         return True
     return False
 def is_straight(hand):
@@ -145,11 +145,11 @@ def is_straight(hand):
     # print(b)
         b1_.sort()
     # print(b)
-    d = max(b1_)
-    e = min(b1_)
-    f = d - e
-    l = len(b1_)
-    if f == 4 and l == 5:
+    d1_ = max(b1_)
+    e1_ = min(b1_)
+    f1_ = d1_ - e1_
+    l1_ = len(b1_)
+    if f1_ == 4 and l1_ == 5:
         return True
     return False
 
@@ -171,9 +171,9 @@ def is_flush(hand):
     # print(type(a))
         b1_.append(a1_)
 # print(b)
-    c = set(b1_)
-    d = len(c)
-    if d == 1:
+    c1_ = set(b1_)
+    d1_ = len(c1_)
+    if d1_ == 1:
         return True
     return False
 

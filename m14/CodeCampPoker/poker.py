@@ -128,10 +128,10 @@ def is_straight(hand):
     # print(b)
         b1_.sort()
     # print(b)
-    d = max(b)
-    e = min(b)
+    d = max(b1_)
+    e = min(b1_)
     f = d - e
-    l = len(b)
+    l = len(b1_)
     if f == 4 and l == 5:
         return True
     return False
@@ -154,7 +154,7 @@ def is_flush(hand):
     # print(type(a))
         b1_.append(a1_)
 # print(b)
-    c = set(b)
+    c = set(b1_)
     d = len(c)
     if d == 1:
         return True

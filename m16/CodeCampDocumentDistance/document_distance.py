@@ -43,9 +43,9 @@ def createDictionary(dictionary,words,index):
         dictionary[w][index] += 1
     return dictionary
 def compute(dictionary):
-    numerator = sum([v[0]*v[1] for v in dictionary.values()])
-    denominator1 = math.sqrt(sum([v[0]**2 for v in dictionary.values()]))
-    denominator2 = math.sqrt(sum([v[1]**2 for v in dictionary.values()]))
+    numerator = sum([v1*v2 for v1,v2 in dictionary.values()])
+    denominator1 = math.sqrt(sum([v1**2 for v1,v2 in dictionary.values()]))
+    denominator2 = math.sqrt(sum([v2**2 for v1,v2 in dictionary.values()]))
     return numerator/(denominator1 * denominator2)
     
 

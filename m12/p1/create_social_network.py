@@ -30,15 +30,28 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
-    str1 = data
-    str1 = str1.split(" follows ")
-    dict1_ = {}
-    for i in str1:
-        if i not in dict1_:
-            dict1_[i] = list(i[1])
+    # str1 = data
+    # str1 = str1.split(" follows ")
+    # dict1_ = {}
+    # for i in str1:
+    #     if i not in dict1_:
+    #         dict1_[i] = list(i[1])
+    #     else:
+    #         dict1_[i] = dict1_.append([0])
+    # return dict1_
+    dict1 = {}
+    def slomosplit(data):
+        data = data.split(" follows ")
+        if data[0] not in dict1:
+            dict1[data[0]] = data[1].split(',')
         else:
-            dict1_[i] = dict1_.append([0])
-    return dict1_
+            #print(data)
+            dict1[data[0]] += data[1].split(',')
+        return dict1
+    splitline = data.splitlines()
+    for i in splitline:
+        slomosplit(i)
+    return(dict1)
 def main():
     """handling test cases"""
     string = ''

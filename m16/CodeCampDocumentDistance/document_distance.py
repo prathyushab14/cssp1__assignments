@@ -35,6 +35,7 @@ def similarity(dict1, dict2):
     dictionary = dict()
     dictionary = createDictionary(dictionary,words_1,0)
     dictionary = createDictionary(dictionary,words_2,1)
+    return compute(dictionary)
 def createDictionary(dictionary,words,index):
     for w in words:
         if w not in dictionary.keys():

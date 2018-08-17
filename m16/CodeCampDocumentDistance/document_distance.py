@@ -11,7 +11,7 @@ def remove_stop_words(words,stopwords):
 
 def words_list(doc):
     word = doc.lower()
-    word = word.split("")
+    word = word.split(" ")
     words = []
     for w in word:
         words.append(w.strip())

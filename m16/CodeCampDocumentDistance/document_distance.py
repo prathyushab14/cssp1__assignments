@@ -5,11 +5,9 @@ import re
 import math
 def remove_stop_words(words,stopwords):
     words1 = []
-    words1 = words.copy()
     for w in words:
         if w not in stopwords and len(w) > 0:
             words1.append(w)
-    # print(words1)
     return words1
 
 
@@ -20,7 +18,7 @@ def words_list(doc):
     for w in word:
         words.append(w.strip())
     regex = re.compile("[^a-z]")
-    words = [regex.sub(" ",w) for w in word]
+    words = [regex.sub("",w) for w in word]
     return words
 
 

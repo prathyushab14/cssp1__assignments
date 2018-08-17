@@ -9,7 +9,7 @@ def remove_stop_words(words,stopwords):
     for w in words:
         if w not in stopwords and len(w) > 0:
             words1.append(w)
-    print(words1)
+    # print(words1)
     return words1
 
 

@@ -10,7 +10,7 @@ def remove_stop_words(words,stopwords):
         if w not in stopwords and len(w) > 0:
             words1.append(w)
     return words1
-    print (words1)
+    print(words1)
 
 def words_list(doc):
     word = doc.lower()

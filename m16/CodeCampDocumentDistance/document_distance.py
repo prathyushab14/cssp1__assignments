@@ -18,7 +18,7 @@ def words_list(doc):
     for w in word:
         words.append(w.strip())
     regex = re.compile("[^a-z]")
-    words = [regex.sub("",w) for w in word]
+    words = [regex.sub("",w) for w in words]
     return words
 
 

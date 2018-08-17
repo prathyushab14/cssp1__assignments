@@ -53,7 +53,7 @@ def create_social_network(data):
     splitline = data.splitlines()
     for i in splitline:
         slomosplit(i)
-    return(dict1)
+    return dict1
 def main():
     """handling test cases"""
     string = ''

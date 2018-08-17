@@ -13,9 +13,9 @@ def remove_stop_words(words,stopwords):
 
 def words_list(doc):
     word = doc.lower()
-    word = word.split(" ")
+    word1 = word.split(" ")
     words = []
-    for w in word:
+    for w in word1:
         words.append(w.strip())
     regex = re.compile('[^a-z]')
     word1s = [regex.sub("",w) for w in words]
@@ -29,12 +29,16 @@ def similarity(dict1, dict2):
     '''
     words_1 = words_list(dict1)
     words_2 = words_list(dict2)
+
     stopwords = load_stopwords("stopwords.txt")
+
     words1 = remove_stop_words(words_1,stopwords)
     words2 = remove_stop_words(words_2,stopwords)
+
     dictionary = dict()
-    dictionary = createDictionary(dictionary,words_1,0)
-    dictionary = createDictionary(dictionary,words_2,1)
+    dictionary = createDictionary(dictionary,words1,0)
+    dictionary = createDictionary(dictionary,words2,1)
+    
     return compute(dictionary)
 def createDictionary(dictionary,words,index):
     for w in words:

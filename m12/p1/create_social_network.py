@@ -41,6 +41,8 @@ def create_social_network(data):
     # return dict1_
     dict1 = {}
     def slomosplit(data):
+        if "follows" not in data:
+            return dict1
         data = data.split(" follows ")
         if data[0] not in dict1:
             dict1[data[0]] = data[1].split(',')

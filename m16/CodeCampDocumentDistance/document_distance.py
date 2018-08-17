@@ -1,11 +1,13 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
+import re
+import math
 def remove_stop_words(words,stopwords):
     words1 = []
     words1 = words.copy()
     for w in words:
-        if w not in stopwords and len(w)>0:
+        if w not in stopwords and len(w) > 0:
             words1.append(w)
     return words1
 

@@ -70,9 +70,10 @@ def build_search_index(docs):
 
     words1 =[regex.sub("",w.strip()) for w in docs1.lower().split(" ")]
     counter = {i:docs.count(i) for i in docs}
+    str1 = ""
     for a in counter.keys():
         if counter[a] > 1:
-            key = list[a]
+            str1 += a
     dict1 = {}
     stopwords = load_stopwords("stopwords.txt")
     # docs1 = word_list(docs)
@@ -126,3 +127,30 @@ def main():
     print_search_index(build_search_index(documents))
 if __name__ == '__main__':
     main()
+# import re
+# text = "comp%uters are efficie$nt3\n computers are"
+# text = text.lower()
+# print(text)
+# result = re.compile('[^a-z]') 
+# result1= [result.sub("",w.strip()) for w in text.split(" ")]
+# print(result1)
+# counter = {i:result1.count(i) for i in result1}
+# print(counter)
+# str1 = ""
+# for a in counter.keys():
+#     if counter[a] > 1:
+#         str1 += a
+# dict1 = {}
+# # stopwords = load_stopwords("stopwords.txt")
+# # docs = word_list(word)
+# for w in result1:
+#     # if w not in stopwords and len(w)>0:
+#     if w not in dict1.keys():
+#         dict1[w] = [0,0]
+#     dict1[w][1] += 1
+# print(dict1)
+# # keys = "are"
+# for i in dict1:
+#         # if i in keys:
+#     if i in str1:
+#         print(i, "-" , dict1[i])

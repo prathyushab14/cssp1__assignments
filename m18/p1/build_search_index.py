@@ -45,11 +45,11 @@ def word_list(text):
     return result1
 
 def find_keys(docs):
-	docs = word_list(docs)
-	counter = {i:docs.count(i) for i in docs}
-	for a in counter.keys():
-		if counter[a] > 1:
-	return a
+    docs = word_list(docs)
+    counter = {i:docs.count(i) for i in docs}
+    for a in counter.keys():
+        if counter[a] > 1:
+            return a
     
 def build_search_index(docs):
     '''
@@ -61,14 +61,14 @@ def build_search_index(docs):
     stopwords = load_stopwords("stopwords.txt")
     docs1 = word_list(docs)
     for w in docs1:
-    	if w not in stopwords and len(w)>0:
-    		if w not in dict1.keys():
-    			dict1[w] = [0,0]
-    		dict1[w][1] += 1
+        if w not in stopwords and len(w)>0:
+            if w not in dict1.keys():
+                dict1[w] = [0,0]
+            dict1[w][1] += 1
     if find_keys(w):
-    	return print_search_index(w)
+        return print_search_index(w)
 
-    		
+            
 
 
 

@@ -40,7 +40,7 @@ def create_social_network(data):
     #         dict1_[i] = dict1_.append([0])
     # return dict1_
     dict1 = {}
-    def slomosplit(data):
+    def split(data):
         if "follows" not in data:
             return dict1
         data = data.split(" follows ")
@@ -52,7 +52,7 @@ def create_social_network(data):
         return dict1
     splitline = data.splitlines()
     for i in splitline:
-        slomosplit(i)
+        split(i)
     return dict1
 def main():
     """handling test cases"""

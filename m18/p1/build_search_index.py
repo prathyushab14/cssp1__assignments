@@ -109,7 +109,7 @@ def main():
         main function
     '''
     # empty document list
-    documents = []
+    documents = ""
     # iterate for n times
     lines = int(input())
     # iterate through N times and add documents to the list

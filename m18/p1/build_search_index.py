@@ -52,7 +52,8 @@ def load_stopwords(filename):
 #     word1s = [regex.sub("",w) for w in words]
 #     return word1s
 def find_keys(docs):
-    docs = word_list(docs)
+
+
     counter = {i:docs.count(i) for i in docs}
     for a in counter.keys():
         if counter[a] > 1:
@@ -68,6 +69,10 @@ def build_search_index(docs):
     regex = re.compile('[^a-z]')
 
     words1 =[regex.sub("",w.strip()) for w in docs1.lower().split(" ")]
+    counter = {i:docs.count(i) for i in docs}
+    for a in counter.keys():
+        if counter[a] > 1:
+            key = a
     dict1 = {}
     stopwords = load_stopwords("stopwords.txt")
     # docs1 = word_list(docs)
@@ -76,8 +81,7 @@ def build_search_index(docs):
             if w not in dict1.keys():
                 dict1[w] = [0,0]
             dict1[w][1] += 1
-    if find_keys(w):
-        return print_search_index(w)
+    return print_search_index(w)
 
             
 

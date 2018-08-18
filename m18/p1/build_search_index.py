@@ -53,9 +53,9 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-    dict1 = {}
-    for line in docs:
-    	if 
+    # dict1 = {}
+    # for line in docs:
+    # 	if 
 
 
     # iterate through all the docs

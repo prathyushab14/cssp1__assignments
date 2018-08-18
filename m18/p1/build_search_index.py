@@ -53,9 +53,15 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-    # dict1 = {}
-    # for line in docs:
-    # 	if 
+    dict1 = {}
+    stopwords = load_stopwords("stopwords.txt")
+    docs = word_list(word)
+    for w in docs:
+    	if w not in stopwords and len(w)>0:
+    		if w not in dict1.keys():
+    			dict1[w] = [0,0]
+    		dict1[w][0] += 1
+    
 
 
     # iterate through all the docs

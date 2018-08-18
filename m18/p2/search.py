@@ -40,11 +40,11 @@ def search(search_index, query):
     query = query.lower()
     query1 = query.split(" ")
     lis1 = set()
-    for i in query1:
-        if i in search_index:
+    for i1_ in query1:
+        if i1_ in search_index:
             val = search_index[i]
-            for j in val:
-                lis1.add(j[0])
+            for j1_ in val:
+                lis1.add(j1_[0])
     return lis1
 
 
@@ -54,8 +54,8 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    for q in queries:
-        print(search(search_index,q))
+    for q1_ in queries:
+        print(search(search_index,q1_))
 
 def main():
     '''

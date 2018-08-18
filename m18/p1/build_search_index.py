@@ -64,9 +64,10 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
+    docs1 = " ".join(str(x) for x in documents)
     regex = re.compile('[^a-z]')
 
-    words1 =[regex.sub("",w.strip()) for w in docs.lower().split(" ")]
+    words1 =[regex.sub("",w.strip()) for w in docs1.lower().split(" ")]
     dict1 = {}
     stopwords = load_stopwords("stopwords.txt")
     # docs1 = word_list(docs)
@@ -109,7 +110,7 @@ def main():
         main function
     '''
     # empty document list
-    documents = ""
+    documents = []
     # iterate for n times
     lines = int(input())
     # iterate through N times and add documents to the list

@@ -72,7 +72,7 @@ def build_search_index(docs):
     counter = {i:docs.count(i) for i in docs}
     for a in counter.keys():
         if counter[a] > 1:
-            key = a
+            key = list[a]
     dict1 = {}
     stopwords = load_stopwords("stopwords.txt")
     # docs1 = word_list(docs)

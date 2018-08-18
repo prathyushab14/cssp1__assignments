@@ -60,7 +60,10 @@ def build_search_index(docs):
     	if w not in stopwords and len(w)>0:
     		if w not in dict1.keys():
     			dict1[w] = [0,0]
-    		dict1[w][0] += 1
+    		dict1[w][1] += 1
+    if i in dict1:
+    	if i in keys:
+    		return print_search_index(ind)
 
 
 

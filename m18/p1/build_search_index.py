@@ -33,25 +33,24 @@ def load_stopwords(filename):
     return stopwords
 
 
-def word_list(text):
-    '''
-        Change case to lower and split the words using a SPACE
-        Clean up the text by remvoing all the non alphabet characters
-        return a list of words
-    '''
-    # word = text.lower()
-    # result = re.compile('[^a-z]')
-    # result1 = [result.sub("",w.strip()) for w in word.split(" ")]
-    # return result1
-    word = text.lower()
-    word1 = word.split(" ")
-    words = []
-    for w in word1:
-        words.append(w.strip())
-    regex = re.compile('[^a-z]')
-    word1s = [regex.sub("",w) for w in words]
-    return word1s
-
+# def word_list(text):
+#     '''
+#         Change case to lower and split the words using a SPACE
+#         Clean up the text by remvoing all the non alphabet characters
+#         return a list of words
+#     '''
+#     # word = text.lower()
+#     # result = re.compile('[^a-z]')
+#     # result1 = [result.sub("",w.strip()) for w in word.split(" ")]
+#     # return result1
+#     word = text.lower()
+#     word1 = word.split(" ")
+#     words = []
+#     for w in word1:
+#         words.append(w.strip())
+#     regex = re.compile('[^a-z]')
+#     word1s = [regex.sub("",w) for w in words]
+#     return word1s
 def find_keys(docs):
     docs = word_list(docs)
     counter = {i:docs.count(i) for i in docs}
@@ -65,10 +64,13 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
+    regex = re.compile('[^a-z]')
+
+    words1 =[regex.sub("",w.strip()) for w in docs.lower().split(" ")]
     dict1 = {}
     stopwords = load_stopwords("stopwords.txt")
-    docs1 = word_list(docs)
-    for w in docs1:
+    # docs1 = word_list(docs)
+    for w in words11:
         if w not in stopwords and len(w)>0:
             if w not in dict1.keys():
                 dict1[w] = [0,0]

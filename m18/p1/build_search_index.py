@@ -64,7 +64,7 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-    docs1 = " ".join(str(x) for x in documents)
+    docs1 = " ".join(str(x) for x in docs)
     regex = re.compile('[^a-z]')
 
     words1 =[regex.sub("",w.strip()) for w in docs1.lower().split(" ")]

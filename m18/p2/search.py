@@ -46,8 +46,6 @@ def search(search_index, query):
             for j1_ in val:
                 lis1.add(j1_[0])
     return lis1
-
-
 def process_queries(search_index, queries):
     '''
         function to process the search queries
@@ -55,26 +53,22 @@ def process_queries(search_index, queries):
         print the results returned by search function
     '''
     for q1_ in queries:
-        print(search(search_index,q1_))
-
+        print(search(search_index, q1_))
 def main():
     '''
         main function
     '''
     # This line loads the search index
     search_index = eval(input())
-
     # read the number of search queries
     lines = int(input())
-    
     # read the search queries into a list
     queries = []
     for i in range(lines):
         queries.append(input())
         i += 1
-
     # call process queries
     process_queries(search_index, queries)
-
 if __name__ == '__main__':
     main()
+

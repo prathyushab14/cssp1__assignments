@@ -44,7 +44,7 @@ def search(search_index, query):
         if i in search_index:
             val = search_index[i]
             for j in val:
-                lis1.add[j[0]]
+                lis1.add(j[0])
     return lis1
 
 

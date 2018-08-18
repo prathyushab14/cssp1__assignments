@@ -39,10 +39,18 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
+    # word = text.lower()
+    # result = re.compile('[^a-z]')
+    # result1 = [result.sub("",w.strip()) for w in word.split(" ")]
+    # return result1
     word = text.lower()
-    result = re.compile('[^a-z]')
-    result1 = [result.sub("",w.strip()) for w in word.split(" ")]
-    return result1
+    word1 = word.split(" ")
+    words = []
+    for w in word1:
+        words.append(w.strip())
+    regex = re.compile('[^a-z]')
+    word1s = [regex.sub("",w) for w in words]
+    return word1s
 
 def find_keys(docs):
     docs = word_list(docs)

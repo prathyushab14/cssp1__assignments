@@ -94,7 +94,7 @@ def build_shift_dict(self, shift):
         return dict1
 
 
-    def apply_shift(self, shift):
+def apply_shift(self, shift):
         '''
         Applies the Caesar Cipher to self.message_text with the input shift.
         Creates a new string that is self.message_text shifted down the

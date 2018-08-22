@@ -114,6 +114,13 @@ def apply_shift(self, shift):
             else:
                 res = res + i
         return res
+def get_message_text(self):
+        '''
+        Used to safely access self.message_text outside of the class
+        
+        Returns: self.message_text
+        '''
+        return self.message_text
         
 
 def main():

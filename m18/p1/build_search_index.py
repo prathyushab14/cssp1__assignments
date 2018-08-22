@@ -149,8 +149,6 @@ if __name__ == '__main__':
 #         dict1[w] = [0,0]
 #     dict1[w][1] += 1
 # print(dict1)
-# # keys = "are"
 # for i in dict1:
-#         # if i in keys:
 #     if i in str1:
 #         print(i, "-" , dict1[i])

@@ -17,9 +17,10 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     m3=[]
-    for i in range(len(m1)):
-        for j in range(len(m1[0])):
-            m3[i][j] = (m1[i][j] + m2[i][j])
+    # for i in range(len(m1)):
+    #     for j in range(len(m1[0])):
+    #         m3[i][j] = (m1[i][j] + m2[i][j])
+    m3 = map(lambda x, y: map(lambda i, j: i + j, x, y),m1, m2)
     return m3
 
 def read_matrix():

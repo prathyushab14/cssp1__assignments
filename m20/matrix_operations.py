@@ -24,13 +24,18 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    try:
-        if len(m1) == len(m2):
-            m3 = [[m1[i][j] + m2[i][j] for j in range(len(m1[0]))] for i in range(len(m1))]
-        return m3
-    except: 
+    #for i,j in zip(m1,m2)
+        #if len(m1) == len(m2):
+    #
+    if len(m1) != len(m2): 
         print("Error: Matrix shapes invalid for addition")
-    return None
+        return
+    for i,j in zip(m1,m2):
+        if len(i) != len(j):
+            print("Error: Matrix shapes invalid for addition")
+            return
+    m3 = [[m1[i][j] + m2[i][j] for j in range(len(m1[0]))] for i in range(len(m1))]
+        return m3 
 
 
 def read_matrix():

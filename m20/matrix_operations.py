@@ -17,7 +17,7 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     for i in range(len(m1)):
-    	for j in range(i):
+    	for j in range(m1[i]):
     		m3 = []
     		m3 = m1[i][j] + m2[i][j]
     return m3
@@ -53,7 +53,7 @@ def main():
     print(add_matrix(m1,m2))
 
     # multiply matrix 1 and matrix 2
-    print(mult_matrix(m1,m2))
+    # print(mult_matrix(m1,m2))
    
 
 if __name__ == '__main__':

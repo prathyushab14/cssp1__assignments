@@ -18,7 +18,9 @@ def add_matrix(m1, m2):
     '''
     m3=[]
     for i in range(len(m1)):
+        print(i)
         for j in range(len(m1[i])):
+            print(j)
             m3[i].append(m1[i][j] + m2[i][j])
     return m3
 

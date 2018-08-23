@@ -20,7 +20,7 @@ def add_matrix(m1, m2):
     	for j in range(i):
     		m3 = []
     		m3 = m1[i][j] + m2[i][j]
-    print(m3)
+    return m3
 
 def read_matrix():
     '''
@@ -31,7 +31,7 @@ def read_matrix():
         error message should be "Error: Invalid input for the matrix"
     '''
     rows,columns = input().split(",")
-    print(rows,columns)
+    # print(rows,columns)
     row = int(rows)
     column = int(columns)
     matrix = []

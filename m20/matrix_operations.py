@@ -1,3 +1,4 @@
+"""matrix"""
 def mult_matrix(m1_, m2_):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -49,13 +50,13 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    rows,columns = input().split(",")
+    rows, columns = input().split(",")
     # print(rows,columns)
     row = int(rows)
     column = int(columns)
     matrix = []
     for i1_ in range(row):
-        lst = [ int(i1_) for i1_ in input().split(" ")]
+        lst = [int(i1_) for i1_ in input().split(" ")]
         matrix.append(lst)
         if len(lst) != column:
             print("Error: Invalid input for the matrix")

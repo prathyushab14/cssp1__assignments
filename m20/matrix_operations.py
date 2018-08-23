@@ -49,10 +49,9 @@ def read_matrix():
     for i in range(row):
         lst = [ int(i) for i in input().split(" ")]
         matrix.append(lst)
-    if column == len(lst):
-        return matrix
-    else:
-        print("Error: Invalid input for the matrix")
+        if len(lst) != column:
+            print("Error: Invalid input for the matrix")
+    return matrix 
 
 
 def main():

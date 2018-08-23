@@ -13,7 +13,7 @@ def mult_matrix(m1_, m2_):
             for j1_ in range(len(m2_[0])):
                 res = 0
                 for k1_ in range(len(m2_)):
-                    res += m1[i1_][k1_] * m2[k1_][j1_]
+                    res += m1_[i1_][k1_] * m2_[k1_][j1_]
                 restemp.append(res)
             result.append(restemp)
         return result

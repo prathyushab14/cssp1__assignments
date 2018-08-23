@@ -51,6 +51,7 @@ def read_matrix():
         matrix.append(lst)
         if len(lst) != column:
             print("Error: Invalid input for the matrix")
+            return None
     return matrix 
 
 
@@ -63,10 +64,12 @@ def main():
     m2 = read_matrix()
 
     # add matrix 1 and matrix 2
-    print(add_matrix(m1,m2))
+    if (m1 != None and m2 != None):
+        print(add_matrix(m1,m2))
 
     # multiply matrix 1 and matrix 2
-    print(mult_matrix(m1,m2))
+    if (m1 != None and m2 != None):
+        print(mult_matrix(m1,m2))
    
 
 if __name__ == '__main__':

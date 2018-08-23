@@ -34,7 +34,8 @@ def add_matrix(m1, m2):
         if len(i) != len(j):
             print("Error: Matrix shapes invalid for addition")
             return
-    m3 = [[m1[i][j] + m2[i][j] for j in range(len(m1[0]))] for i in range(len(m1))]
+    else:
+        m3 = [[m1[i][j] + m2[i][j] for j in range(len(m1[0]))] for i in range(len(m1))]
         return m3 
 
 

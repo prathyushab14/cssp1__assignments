@@ -1,4 +1,4 @@
-def main()
+def main():
     rows, columns = 3, 3
     row = int(rows)
     column = int(columns)

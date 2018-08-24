@@ -12,9 +12,9 @@ def main():
     print(decide_winner(board))
 def decide_winner(board):
     for i in board:
-        if i.count('o') == 3:
+        if i.count('o') == 3 and i.count('x') < 3:
             return 'o'
-        if i.count('x') == 3:
+        if i.count('x') == 3 and i.count('o') < 3:
             return 'x'
         if i[0] == 'x' or i[1] == 'x' or i[2] == 'x':
             return 'x'
@@ -22,7 +22,7 @@ def decide_winner(board):
             return 'o'
         if count('x') == 3 and count('o') == 3:
             return 'draw'
-        
+
     # for i in range(len(board)):
     #     if board([i][i]) == 'x':
     #         return 'x'

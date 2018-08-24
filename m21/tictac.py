@@ -13,5 +13,7 @@ def decide_winner(board):
     for i in board:
     	if i.count('o') == 3:
     		return 'o'
+    	if i.count('x') == 3:
+    		return 'x'
 if __name__ == '__main__':
 	main()

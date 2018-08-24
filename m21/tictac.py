@@ -15,5 +15,9 @@ def decide_winner(board):
             return 'o'
         if i.count('x') == 3:
             return 'x'
+    diag1 = set([board[0][0],board[1][1],board[2][2]])
+    diag2 = set([board[0][2].board[1][1],board[2][0]])
+    if len(diag1) == 1 or len(diag2) == 1 and board[1][1] != '.':
+        return board[1][1]
 if __name__ == '__main__':
     main()

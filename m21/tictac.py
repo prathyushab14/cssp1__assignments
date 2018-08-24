@@ -36,7 +36,7 @@ def main():
         i = i+1
     if checkInput(matrix):
         if checkGame(matrix):
-            if checkWinner(matrix):
+            checkWinner(matrix):
         else:
             print("invalid game")
     else:

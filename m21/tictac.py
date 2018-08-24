@@ -7,4 +7,8 @@ board = []
 for i in range(row):
 	lst = [i for i in input().split(" ")]
 	board.append(lst)
-print(board)
+print(decide_winner(board))
+def decide_winner(board):
+    for i in board:
+    	if i.count(X) == 3:
+    		return X

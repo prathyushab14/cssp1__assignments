@@ -89,7 +89,7 @@ def diagonal(matrix):
         d1.append(matrix[i][i])
     if d1.count("o") == 3:
         return (True, "o")
-    if d2.count("x") == 3:
+    if d1.count("x") == 3:
         return (True, "x")
     d2 = []
     j = len(matrix[0]) - 1

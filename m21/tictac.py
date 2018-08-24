@@ -109,7 +109,7 @@ def checkWinner(matrix):
     elif column(matrix)[0]:
         print(column(matrix)[1])
     elif diagonal(matrix)[0]:
-        print(diagonals(matrix)[1])
+        print(diagonal(matrix)[1])
     else:
         print("draw")
 if __name__ == '__main__':

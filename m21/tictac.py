@@ -20,6 +20,9 @@ def decide_winner(board):
             return 'x'
         if i[0] == 'o' or i[1] == 'o' or i[2] == 'o':
             return 'o'
+        if count('x') == 3 and count('o') == 3:
+            return 'draw'
+        
     # for i in range(len(board)):
     #     if board([i][i]) == 'x':
     #         return 'x'

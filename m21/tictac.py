@@ -13,5 +13,5 @@ def decide_winner(board):
     for i in board:
     	if i.count(X) == 3:
     		return X
-if __name__ = '__main__':
+if __name__ == '__main__':
 	main()

@@ -15,5 +15,8 @@ def decide_winner(board):
     		return 'o'
     	if i.count('x') == 3:
     		return 'x'
+    	le == 'x' || le == 'o'
+    	if i[0][0] == i[1][1] == i[2][2] == le:
+    		return le
 if __name__ == '__main__':
 	main()

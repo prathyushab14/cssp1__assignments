@@ -12,10 +12,10 @@ def main():
     print(decide_winner(board))
 def decide_winner(board):
     for i in board:
-        if i.count('o') == 3 and i.count('x') < 3:
-            return 'o'
-        if i.count('x') == 3 and i.count('o') < 3:
-            return 'x'
+        # if i.count('o') == 3 and i.count('x') < 3:
+        #     return 'o'
+        # if i.count('x') == 3 and i.count('o') < 3:
+        #     return 'x'
         if i[0] == 'x' or i[1] == 'x' or i[2] == 'x':
             return 'x'
         if i[0] == 'o' or i[1] == 'o' or i[2] == 'o':

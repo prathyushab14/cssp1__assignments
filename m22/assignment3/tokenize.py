@@ -4,11 +4,13 @@ each word
 '''
 
 def tokenize(string):
-    lst = []
-    data = string.split(" ")
-    lst = lst.append(data)
-    str1 = [lst.count(word) for word in lst]
-    return(dict(zip(lst,str1)))      
+    dict1 = {}
+    for word in string:
+        if word in dict1.keys():
+            dict1[word] += 1
+        else:
+            dict1[word] = 1
+    return dict1   
 def main():
     string = ""
     lines = int(input())

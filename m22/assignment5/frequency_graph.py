@@ -8,10 +8,7 @@ def frequency_graph(dictionary):
     lst.sort()
     for i in lst:
         n = dictionary[i]
-        while n > 0:
-            dictionary[i] = "#"
-            n = n - 1
-        print(" - ".join((i, str(dictionary[i]))))
+        print(" - ".join((i, str(n * "#"))))
 
 def main():
     dictionary = eval(input())

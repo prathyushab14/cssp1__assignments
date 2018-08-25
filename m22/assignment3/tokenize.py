@@ -4,6 +4,7 @@ each word
 '''
 import re
 def tokenize(string):
+    """dic"""
     dict1 = {}
     str1 = string.strip("\n")
     regex = re.sub('[^a-zA-Z"]', "", string)
@@ -15,6 +16,7 @@ def tokenize(string):
             dict1[i] = 1
     return dict1   
 def main():
+    """input"""
     string = ""
     lines = int(input())
     for i in range(lines):

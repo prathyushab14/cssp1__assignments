@@ -7,7 +7,6 @@ def tokenize(string):
     dict1 = {}
     str1 = string.strip("\n")
     regex = re.sub('[^a-zA-Z"]', "", string)
-    re1 = re.sub('[,;]',"",string)
     data = str1.split(" ")
     for i in data:
         if i in dict1:

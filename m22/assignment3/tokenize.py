@@ -8,9 +8,9 @@ def tokenize(string):
     data = string.split(" ")
     for i in data:
         if i in dict1:
-        dict1[i] += 1
-    else:
-        dict1[i] = 1
+            dict1[i] += 1
+        else:
+            dict1[i] = 1
     return dict1   
 def main():
     string = ""

@@ -4,7 +4,7 @@ each word
 '''
 
 def tokenize(string):
-	dict1 = {}
+    dict1 = {}
     for word in string:
         if word not in dict1.keys():
             dict1[word] =  1

@@ -6,10 +6,11 @@ each word
 def tokenize(string):
     dict1 = {}
     data = string.split(" ")
-    if data[0] in dict1:
-        dict1[data[0]] += 1
+    for i in data
+        if i in dict1:
+        dict1[i] += 1
     else:
-        dict1[data[0]] = 1
+        dict1[i] = 1
     return dict1   
 def main():
     string = ""

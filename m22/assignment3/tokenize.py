@@ -4,10 +4,20 @@ each word
 '''
 
 def tokenize(string):
-    pass
-            
+	dict1 = {}
+    for word in string:
+        if word not in dict1.keys():
+            dict1[word] =  1
+        else:
+            dict1[word] += 1
+    return dict1       
 def main():
-    pass
+    string = ""
+    lines = int(input())
+    for i in range(lines):
+        string += input()
+        string += '\n'
+    print(tokenize(string))
 
 if __name__ == '__main__':
     main()

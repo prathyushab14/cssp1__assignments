@@ -17,7 +17,7 @@ def check_sudoku(sudoku):
         rowset = set(row)
         if len(rowset) == 9:
             return True
-        else return False 
+        return False 
 
 
 def main():

@@ -21,7 +21,7 @@ def check_sudoku(sudoku):
 def check_rows(sudoku):
     for row in sudoku:
         rowset = set(row)
-        if len(rowset) == 9:
+        if len(rowset) == 9 and '1-9' in rowset:
             return True
         return False
 def check_columns(sudoku):

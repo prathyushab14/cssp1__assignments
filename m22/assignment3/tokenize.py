@@ -6,7 +6,7 @@ each word
 def tokenize(string):
     dict1 = {}
     for word in string:
-        if word in dict1.keys():
+        if string[0] in dict1.keys():
             dict1[word] += 1
         else:
             dict1[word] = 1
@@ -17,7 +17,7 @@ def main():
     for i in range(lines):
         string += input()
         string += '\n'
-    print(string)
+    print(type(string))
     print(tokenize(string))
 
 if __name__ == '__main__':

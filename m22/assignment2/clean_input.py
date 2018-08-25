@@ -5,7 +5,7 @@ alphabets in both upper and lower case and numbers.
 
 def clean_string(string):
     string = string.strip()
-    return newstr
+    return string
 
 def main():
     string = input()

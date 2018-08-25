@@ -5,11 +5,11 @@ each word
 
 def tokenize(string):
     dict1 = {}
-    for word in string:
-        if string[0] in dict1.keys():
-            dict1[word] += 1
-        else:
-            dict1[word] = 1
+    data = string.split(" ")
+    if data[0] in dict1:
+        dict1[data[0]] += 1
+    else:
+        dict1[data[0]] = 1
     return dict1   
 def main():
     string = ""
@@ -17,7 +17,6 @@ def main():
     for i in range(lines):
         string += input()
         string += '\n'
-    print(type(string))
     print(tokenize(string))
 
 if __name__ == '__main__':

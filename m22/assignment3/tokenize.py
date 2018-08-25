@@ -14,7 +14,7 @@ def tokenize(string):
             dict1[i] += 1
         else:
             dict1[i] = 1
-    return dict1   
+    return dict1
 def main():
     """input"""
     string = ""

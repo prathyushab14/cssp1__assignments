@@ -5,7 +5,7 @@ each word
 
 def tokenize(string):
     lst = []
-    data = data.split("")
+    data = string.split("")
     lst = lst.append(data)
     str1 = [lst.count(word) for word in lst]
     return(dict(zip(lst,str1)))      

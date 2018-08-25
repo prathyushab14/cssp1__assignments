@@ -4,7 +4,7 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-    string = string.strip()
+    string = string.strip("\n")
     str1 = string.replace("!@#$%^&*()-<>","")
     return str1
 

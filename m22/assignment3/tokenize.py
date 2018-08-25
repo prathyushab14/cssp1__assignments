@@ -6,7 +6,7 @@ each word
 def tokenize(string):
     dict1 = {}
     data = string.split(" ")
-    for i in data
+    for i in data:
         if i in dict1:
         dict1[i] += 1
     else:

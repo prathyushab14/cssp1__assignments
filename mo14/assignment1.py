@@ -1,5 +1,3 @@
-import string
-'''Problem 1 - Build the Shift Dictionary and Apply Shift'''
 # The Message class contains methods that could be used to apply a
 # cipher to a string, either to encrypt or to decrypt a message
 # (since for Caesar codes this is the same action).
@@ -41,6 +39,7 @@ import string
 # Remember that spaces and punctuation should not be changed by the cipher.
 
 # Helper code
+import string
 def load_words(file_name):
     '''
     file_name (string): the name of the file containing
@@ -65,63 +64,60 @@ WORDLIST_FILENAME = 'words.txt'
 # Helper code End
 
 
-### Paste your implementation of the Message class h
-def build_shift_dict(self, shift):
+### Paste your implementation of the Message class here
+class Message():
+    '''
+    message
+    '''
+    def __init__(self, text):
         '''
-        Creates a dictionary that can be used to apply a cipher to a letter.
-        The dictionary maps every uppercase and lowercase letter to a
-        character shifted down the alphabet by the input shift. The dictionary
-        should have 52 keys of all the uppercase letters and all the lowercase
-        letters only.        
-        
-        shift (integer): the amount by which to shift every letter of the 
-        alphabet. 0 <= shift < 26
-
-        Returns: a dictionary mapping a letter (string) to   
-                 another letter (string). 
+        constructor
         '''
-        dict1 = {}
-        keys = list(string.ascii_lowercase) + list(string.ascii_uppercase)
-        result = ""
-        for i in keys:
-            if i == "":
-                result = result + i
-            elif i.isupper():
-                result = result + chr((ord(i) + shift - 65) % 26 + 65)
-            else:
-                result = result + chr((ord(i) + shift - 97) % 26 + 97)
-        dict1 = dict(zip(keys,result))
-        return dict1
-
-
-def apply_shift(self, shift):
+        self.message_text = text
+        self.valid_words = load_words("words.txt")
+        self.shift_dict = {}
+    def get_message_text(self):
         '''
-        Applies the Caesar Cipher to self.message_text with the input shift.
-        Creates a new string that is self.message_text shifted down the
-        alphabet by some number of characters determined by the input shift        
-        
-        shift (integer): the shift with which to encrypt the message.
-        0 <= shift < 26
-
-        Returns: the message text (string) in which every character is shifted
-             down the alphabet by the input shift
-        '''
-        dictionary = self.build_shift_dict(shift)
-        res = ""
-        for i in self.message_text:
-            if i in dictionary.keys():
-                res = res + dictionary[i]
-            else:
-                res = res + i
-        return res
-def get_message_text(self):
-        '''
-        Used to safely access self.message_text outside of the class
-        
-        Returns: self.message_text
+        message getter
         '''
         return self.message_text
-        
+    def get_valid_words(self):
+        '''
+        valid words
+        '''
+        return self.valid_words[:]
+    def build_shift_dict(self, shift):
+        '''
+        letters of string
+        '''
+        lower_keys = list(string.ascii_lowercase)
+        lower_values = list(string.ascii_lowercase)
+        shift_lower_vals = lower_values[shift:] + lower_values[:shift]
+        upper_keys = list(string.ascii_uppercase)
+        upper_values = list(string.ascii_uppercase)
+        shift_upper_vals = upper_values[shift:] + upper_values[:shift]
+        total_keys = lower_keys + upper_keys
+        total_values = shift_lower_vals + shift_upper_vals
+        self.shift_dict = dict(zip(total_keys, total_values))
+        return self.shift_dict
+    def apply_shift(self, shift):
+        '''
+        shift strings
+        '''
+        new_msg = []
+        for i in self.message_text:
+            if i not in self.build_shift_dict(shift).keys():
+                new_msg.append(i)
+                continue
+            else:
+                new_msg.append(self.build_shift_dict(shift)[i])
+        return ''.join(new_msg)
+
+
+
+
+    # def get_message_text(self):
+    #     return self.
 
 def main():
     '''

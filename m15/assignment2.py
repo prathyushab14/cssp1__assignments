@@ -1,36 +1,3 @@
-
-2 of 2,227
-Fwd: m15
-Inbox
-x
-
-Bharath Reddy
-Attachments
-7:09 PM (31 minutes ago)
-to me
-
-
-
----------- Forwarded message ---------
-From: krishna prasad <kpkishankrishna@gmail.com>
-Date: Sun, Aug 26, 2018 at 6:04 PM
-Subject: Fwd: m15
-To: krishna meherwan <meherwan.rockstar@gmail.com>, <krishnaja625@gmail.com>, <bharathkumarreddy55@gmail.com>
-
-
-
-
----------- Forwarded message ---------
-From: GONUGUNTA VENKATANAGA ANJANEYA AKHIL 20186087 <akhil.gonugunta@msitprogram.net>
-Date: Sun, Aug 26, 2018 at 4:09 PM
-Subject: m15
-To: krishna prasad <kpkishankrishna@gmail.com>
-
-
-
-
-2 Attachments
-
 ''' Implement CipherTextMessage Class '''
 import string
 
